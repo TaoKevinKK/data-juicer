@@ -5,33 +5,33 @@
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="index" title="索引" href="../genindex.html" /><link rel="search" title="搜索" href="../search.html" /><link rel="next" title="“坏”数据展览" href="BadDataExhibition_ZH.html" /><link rel="prev" title="数据菜谱Gallery" href="RecipeGallery_ZH.html" />
 
-    <!-- Generated with Sphinx 8.1.3 and Furo 2024.08.06 -->
-        <title>数据集配置指南 - data-juicer</title>
-      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=8f2a1f02" />
-    <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?v=354aac6f" />
+    <!-- Generated with Sphinx 8.2.3 and Furo 2025.07.19 -->
+        <title>数据集配置指南 - Data Juicer</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=d111a655" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?v=25af2a20" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?v=302659d7" />
-    <link rel="stylesheet" type="text/css" href="../_static/sidebar-menu.css?v=dcc41d8a" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?v=8dab3a3b" />
+    <link rel="stylesheet" type="text/css" href="../_static/sidebar-menu.css?v=aecff795" />
     
     
 
 
 <style>
   body {
-    --color-code-background: #f8f8f8;
-  --color-code-foreground: black;
+    --color-code-background: #f2f2f2;
+  --color-code-foreground: #1e1e1e;
   
   }
   @media not print {
     body[data-theme="dark"] {
-      --color-code-background: #202020;
-  --color-code-foreground: #d0d0d0;
+      --color-code-background: #2b2b2b;
+  --color-code-foreground: #f8f8f2;
   
     }
     @media (prefers-color-scheme: dark) {
       body:not([data-theme="light"]) {
-        --color-code-background: #202020;
-  --color-code-foreground: #d0d0d0;
+        --color-code-background: #2b2b2b;
+  --color-code-foreground: #f8f8f2;
   
       }
     }
@@ -170,7 +170,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../index_ZH.html"><div class="brand">data-juicer</div></a>
+      <a href="../index_ZH.html"><div class="brand">Data Juicer</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -193,8 +193,7 @@
       
       <div class="sidebar-sticky"><a class="sidebar-brand" href="../index_ZH.html">
   
-  
-  <span class="sidebar-brand-text">data-juicer</span>
+  <span class="sidebar-brand-text">Data Juicer</span>
   
 </a><form class="sidebar-search-container" method="get" action="../search.html" role="search">
   <input class="sidebar-search" placeholder="搜索" name="q" aria-label="搜索">
@@ -215,6 +214,7 @@
 <li class="toctree-l1 current current-page"><a class="current reference internal" href="#">数据集配置指南</a></li>
 <li class="toctree-l1"><a class="reference internal" href="BadDataExhibition_ZH.html">“坏”数据展览</a></li>
 <li class="toctree-l1"><a class="reference internal" href="DJ_SORA_ZH.html">DJ-SORA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="DJ_agent_ZH.html">DataJuicer-Agent</a></li>
 <li class="toctree-l1"><a class="reference internal" href="DJ_service_ZH.html">DJ_服务化</a></li>
 <li class="toctree-l1"><a class="reference internal" href="DeveloperGuide_ZH.html">开发者指南</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Distributed_ZH.html">Data-Juicer 分布式数据处理</a></li>
@@ -239,6 +239,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../tools/hpo/README_ZH.html">数据菜谱的自动化超参优化</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tools/humanops/README.html">Label Studio Service Utility</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tools/mm_eval/inception_metrics/README_ZH.html">视频生成测评工具</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tools/mm_eval/vbench_metrics/README_ZH.html">VBench metrics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tools/postprocess/README_ZH.html">Postprocess tools</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tools/preprocess/README_ZH.html">预处理工具</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tools/quality_classifier/README_ZH.html">给数据打分</a></li>
@@ -251,72 +252,57 @@
 <p class="caption" role="heading"><span class="caption-text">API Reference</span></p>
 <ul>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../api.html">API Reference</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of API Reference</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../data_juicer.core.html">data_juicer.core package</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle navigation of data_juicer.core package</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../data_juicer.core.data.html">data_juicer.core.data package</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../data_juicer.core.executor.html">data_juicer.core.executor package</a></li>
-</ul>
-</li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../data_juicer.ops.html">data_juicer.ops package</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle navigation of data_juicer.ops package</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../data_juicer.ops.aggregator.html">data_juicer.ops.aggregator package</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../data_juicer.ops.common.html">data_juicer.ops.common package</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../data_juicer.ops.deduplicator.html">data_juicer.ops.deduplicator package</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../data_juicer.ops.filter.html">data_juicer.ops.filter package</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../data_juicer.ops.grouper.html">data_juicer.ops.grouper package</a></li>
-<li class="toctree-l3 has-children"><a class="reference internal" href="../data_juicer.ops.mapper.html">data_juicer.ops.mapper package</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle navigation of data_juicer.ops.mapper package</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l4"><a class="reference internal" href="../data_juicer.ops.mapper.annotation.html">data_juicer.ops.mapper.annotation package</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../data_juicer.ops.selector.html">data_juicer.ops.selector package</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../data_juicer.ops.filter.html">data_juicer.ops.filter package</a></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../data_juicer.ops.mapper.html">data_juicer.ops.mapper package</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" role="switch" type="checkbox"/><label for="toctree-checkbox-5"><div class="visually-hidden">Toggle navigation of data_juicer.ops.mapper package</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../data_juicer.ops.mapper.annotation.html">data_juicer.ops.mapper.annotation package</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../data_juicer.ops.deduplicator.html">data_juicer.ops.deduplicator package</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../data_juicer.ops.selector.html">data_juicer.ops.selector package</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../data_juicer.ops.common.html">data_juicer.ops.common package</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../data_juicer.analysis.html">data_juicer.analysis package</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../data_juicer.config.html">data_juicer.config package</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../data_juicer.format.html">data_juicer.format package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/data_juicer.core.html">data_juicer.core</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/data_juicer.ops.html">data_juicer.ops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/data_juicer.ops.filter.html">data_juicer.ops.filter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/data_juicer.ops.mapper.html">data_juicer.ops.mapper</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/data_juicer.ops.deduplicator.html">data_juicer.ops.deduplicator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/data_juicer.ops.selector.html">data_juicer.ops.selector</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/data_juicer.ops.common.html">data_juicer.ops.common</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/data_juicer.analysis.html">data_juicer.analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/data_juicer.config.html">data_juicer.config</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/data_juicer.format.html">data_juicer.format</a></li>
 </ul>
 </li>
 </ul>
 
 </div></div><div class="sidebar-bottom-menu">
-    <div class="current-info">
-        <span class="current-lang">zh-CN</span>|<span class="current-version">main</span>
+  <div class="current-info">
+    <span class="current-lang">zh-CN</span>|<span class="current-version">main</span>
+  </div>
+  <div class="dropdown-panel">
+    
+    <div class="section">
+      <dt>Language</dt>
+      <dd>
+        
+        <a href="../../../en/main/docs/DatasetCfg.html"
+          >
+          English
+        </a>
+        
+        <a href="../../../zh_CN/main/docs/DatasetCfg_ZH.html"
+          >
+          简体中文
+        </a>
+        
+      </dd>
     </div>
-    <div class="dropdown-panel">
-        
-        <div class="section">
-            <dt>Language</dt>
-            <dd>
-                
-                <a href="../../../en/main/docs/DatasetCfg.html"
-                    >
-                    English
-                </a>
-                
-                <a href="../../../zh_CN/main/docs/DatasetCfg_ZH.html"
-                    >
-                    简体中文
-                </a>
-                
-            </dd>
-        </div>
-        
+    
 
+    
+    <div class="section version">
+      <dt>Version</dt>
+      <dd>
         
-        <div class="section">
-            <dt>Version</dt>
-            <dd>
-                    <a href="DatasetCfg_ZH.html">main</a>
-            </dd>
-        </div>
+        <a href="../../main/docs/DatasetCfg_ZH.html" class="active" >
+          main
+        </a>
         
+      </dd>
     </div>
+    
+  </div>
 </div>
       </div>
       
@@ -364,17 +350,17 @@
 对于本地文件，DJ 将自动检测文件格式并相应地加载数据集。支持 parquet、jsonl、json、csv、tsv、txt 和 jsonl.gz 等格式
 有关更多详细信息，请参阅 <a class="reference external" href="https://github.com/modelscope/data-juicer/blob/main/configs/datasets/local_json.yaml">local_json.yaml</a>。</p>
 <div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">dataset</span><span class="p">:</span>
-<span class="nt">configs</span><span class="p">:</span>
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">local</span>
-<span class="nt">path</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">path/to/your/local/dataset.json</span>
-<span class="nt">format</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">json</span>
+<span class="w">  </span><span class="nt">configs</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">local</span>
+<span class="w">      </span><span class="nt">path</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">path/to/your/local/dataset.json</span>
+<span class="w">      </span><span class="nt">format</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">json</span>
 </pre></div>
 </div>
 <div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">dataset</span><span class="p">:</span>
-<span class="nt">configs</span><span class="p">:</span>
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">local</span>
-<span class="nt">path</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">path/to/your/local/dataset.parquet</span>
-<span class="nt">format</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">parquet</span>
+<span class="w">  </span><span class="nt">configs</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">local</span>
+<span class="w">      </span><span class="nt">path</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">path/to/your/local/dataset.parquet</span>
+<span class="w">      </span><span class="nt">format</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">parquet</span>
 </pre></div>
 </div>
 </section>
@@ -383,13 +369,13 @@
 <p><code class="docutils literal notranslate"><span class="pre">remote_huggingface.yaml</span></code> 配置文件用于指定 huggingface 数据集。<em>type</em> 和 <em>source</em> 固定为 'remote' 和 'huggingface'，以定位 huggingface 加载逻辑。<em>path</em> 是必需的，用于标识 huggingface 数据集。<em>name</em>、<em>split</em> 和 <em>limit</em> 是可选的，用于指定数据集名称/拆分并限制要加载的样本数量。
 更多详细信息请参阅 <a class="reference external" href="https://github.com/modelscope/data-juicer/blob/main/configs/datasets/remote_huggingface.yaml">remote_huggingface.yaml</a>。</p>
 <div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">dataset</span><span class="p">:</span>
-<span class="nt">configs</span><span class="p">:</span>
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;remote&#39;</span>
-<span class="nt">source</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;huggingface&#39;</span>
-<span class="nt">path</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;HuggingFaceFW/fineweb&quot;</span>
-<span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;CC-MAIN-2024-10&quot;</span>
-<span class="nt">split</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;train&quot;</span>
-<span class="nt">limit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
+<span class="w">  </span><span class="nt">configs</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;remote&#39;</span>
+<span class="w">      </span><span class="nt">source</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;huggingface&#39;</span>
+<span class="w">      </span><span class="nt">path</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;HuggingFaceFW/fineweb&quot;</span>
+<span class="w">      </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;CC-MAIN-2024-10&quot;</span>
+<span class="w">      </span><span class="nt">split</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;train&quot;</span>
+<span class="w">      </span><span class="nt">limit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
 </pre></div>
 </div>
 </section>
@@ -398,13 +384,13 @@
 <p><code class="docutils literal notranslate"><span class="pre">remote_arxiv.yaml</span></code> 配置文件用于指定以 JSON 格式远程存储的数据集。<em>type</em> 和 <em>source</em> 固定为 'remote' 和 'arxiv'，以定位 arxiv 加载逻辑。 <em>lang</em>、<em>dump_date</em>、<em>force_download</em> 和 <em>url_limit</em> 是可选的，用于指定数据集语言、转储日期、强制下载和 URL 限制。
 有关更多详细信息，请参阅 <a class="reference external" href="https://github.com/modelscope/data-juicer/blob/main/configs/datasets/remote_arxiv.yaml">remote_arxiv.yaml</a>。</p>
 <div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">dataset</span><span class="p">:</span>
-<span class="nt">configs</span><span class="p">:</span>
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;remote&#39;</span>
-<span class="nt">source</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;arxiv&#39;</span>
-<span class="nt">lang</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;en&#39;</span>
-<span class="nt">dump_date</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;latest&#39;</span>
-<span class="nt">force_download</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
-<span class="nt">url_limit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2</span>
+<span class="w">  </span><span class="nt">configs</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;remote&#39;</span>
+<span class="w">      </span><span class="nt">source</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;arxiv&#39;</span>
+<span class="w">      </span><span class="nt">lang</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;en&#39;</span>
+<span class="w">      </span><span class="nt">dump_date</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;latest&#39;</span>
+<span class="w">      </span><span class="nt">force_download</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">      </span><span class="nt">url_limit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2</span>
 </pre></div>
 </div>
 </section>
@@ -420,14 +406,14 @@
 <p><code class="docutils literal notranslate"><span class="pre">mixture.yaml</span></code> 配置文件演示了如何指定数据混合规则。DJ 将通过对数据集的一部分进行采样并应用适当的权重来混合数据集。
 有关更多详细信息，请参阅 <a class="reference external" href="https://github.com/modelscope/data-juicer/blob/main/configs/datasets/mixture.yaml">mixture.yaml</a>。</p>
 <div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">dataset</span><span class="p">:</span>
-<span class="nt">max_sample_num</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10000</span>
-<span class="nt">configs</span><span class="p">:</span>
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;local&#39;</span>
-<span class="nt">weight</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1.0</span>
-<span class="nt">path</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;path/to/json/file&#39;</span>
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;local&#39;</span>
-<span class="nt">weight</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1.0</span>
-<span class="nt">path</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;path/to/csv/file&#39;</span>
+<span class="w">  </span><span class="nt">max_sample_num</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10000</span>
+<span class="w">  </span><span class="nt">configs</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;local&#39;</span>
+<span class="w">      </span><span class="nt">weight</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1.0</span>
+<span class="w">      </span><span class="nt">path</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;path/to/json/file&#39;</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;local&#39;</span>
+<span class="w">      </span><span class="nt">weight</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1.0</span>
+<span class="w">      </span><span class="nt">path</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;path/to/csv/file&#39;</span>
 </pre></div>
 </div>
 </section>
@@ -436,24 +422,24 @@
 <p><code class="docutils literal notranslate"><span class="pre">validator.yaml</span></code> 配置文件演示了如何指定数据验证规则。DJ 将通过对数据集的一部分进行采样并应用验证规则来验证数据集。
 有关更多详细信息和支持的验证器，请参阅 <a class="reference external" href="https://github.com/modelscope/data-juicer/blob/main/data_juicer/core/data/data_validator.py">data_validator.py</a>。</p>
 <div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">dataset</span><span class="p">:</span>
-<span class="nt">configs</span><span class="p">:</span>
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">local</span>
-<span class="nt">path</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">path/to/data.json</span>
+<span class="w">  </span><span class="nt">configs</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">local</span>
+<span class="w">      </span><span class="nt">path</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">path/to/data.json</span>
 
 <span class="nt">validators</span><span class="p">:</span>
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">swift_messages</span>
-<span class="nt">min_turns</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2</span>
-<span class="nt">max_turns</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">20</span>
-<span class="nt">sample_size</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">required_fields</span>
-<span class="nt">required_fields</span><span class="p">:</span>
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;text&quot;</span>
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;metadata&quot;</span>
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;language&quot;</span>
-<span class="nt">field_types</span><span class="p">:</span>
-<span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;str&quot;</span>
-<span class="nt">metadata</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;dict&quot;</span>
-<span class="nt">language</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;str&quot;</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">swift_messages</span>
+<span class="w">    </span><span class="nt">min_turns</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2</span>
+<span class="w">    </span><span class="nt">max_turns</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">20</span>
+<span class="w">    </span><span class="nt">sample_size</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">required_fields</span>
+<span class="w">    </span><span class="nt">required_fields</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;text&quot;</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;metadata&quot;</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;language&quot;</span>
+<span class="w">    </span><span class="nt">field_types</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;str&quot;</span>
+<span class="w">      </span><span class="nt">metadata</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;dict&quot;</span>
+<span class="w">      </span><span class="nt">language</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;str&quot;</span>
 </pre></div>
 </div>
 </section>
@@ -557,10 +543,10 @@ dj-process<span class="w"> </span>--dataset_path<span class="w"> </span><span cl
     </aside>
   </div>
 </div>
-<script src="../_static/documentation_options.js?v=2491dde2"></script>
+<script src="../_static/documentation_options.js?v=011da5d6"></script>
     <script src="../_static/doctools.js?v=9bcbadda"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script src="../_static/scripts/furo.js?v=5fa4622c"></script>
+    <script src="../_static/scripts/furo.js?v=46bd48cc"></script>
     <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="../_static/copybutton.js?v=f281be69"></script>
     <script src="../_static/translations.js?v=beaddf03"></script>

@@ -5,33 +5,33 @@
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="index" title="索引" href="genindex.html" /><link rel="search" title="搜索" href="search.html" />
 
-    <!-- Generated with Sphinx 8.1.3 and Furo 2024.08.06 -->
-        <title>Data Processing for and with Foundation Models - data-juicer</title>
-      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=8f2a1f02" />
-    <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?v=354aac6f" />
+    <!-- Generated with Sphinx 8.2.3 and Furo 2025.07.19 -->
+        <title>Data Processing for and with Foundation Models - Data Juicer</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=d111a655" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?v=25af2a20" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?v=302659d7" />
-    <link rel="stylesheet" type="text/css" href="_static/sidebar-menu.css?v=dcc41d8a" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?v=8dab3a3b" />
+    <link rel="stylesheet" type="text/css" href="_static/sidebar-menu.css?v=aecff795" />
     
     
 
 
 <style>
   body {
-    --color-code-background: #f8f8f8;
-  --color-code-foreground: black;
+    --color-code-background: #f2f2f2;
+  --color-code-foreground: #1e1e1e;
   
   }
   @media not print {
     body[data-theme="dark"] {
-      --color-code-background: #202020;
-  --color-code-foreground: #d0d0d0;
+      --color-code-background: #2b2b2b;
+  --color-code-foreground: #f8f8f2;
   
     }
     @media (prefers-color-scheme: dark) {
       body:not([data-theme="light"]) {
-        --color-code-background: #202020;
-  --color-code-foreground: #d0d0d0;
+        --color-code-background: #2b2b2b;
+  --color-code-foreground: #f8f8f2;
   
       }
     }
@@ -170,7 +170,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="index_ZH.html"><div class="brand">data-juicer</div></a>
+      <a href="index_ZH.html"><div class="brand">Data Juicer</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -193,8 +193,7 @@
       
       <div class="sidebar-sticky"><a class="sidebar-brand" href="index_ZH.html">
   
-  
-  <span class="sidebar-brand-text">data-juicer</span>
+  <span class="sidebar-brand-text">Data Juicer</span>
   
 </a><form class="sidebar-search-container" method="get" action="search.html" role="search">
   <input class="sidebar-search" placeholder="搜索" name="q" aria-label="搜索">
@@ -215,6 +214,7 @@
 <li class="toctree-l1"><a class="reference internal" href="docs/DatasetCfg_ZH.html">数据集配置指南</a></li>
 <li class="toctree-l1"><a class="reference internal" href="docs/BadDataExhibition_ZH.html">“坏”数据展览</a></li>
 <li class="toctree-l1"><a class="reference internal" href="docs/DJ_SORA_ZH.html">DJ-SORA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="docs/DJ_agent_ZH.html">DataJuicer-Agent</a></li>
 <li class="toctree-l1"><a class="reference internal" href="docs/DJ_service_ZH.html">DJ_服务化</a></li>
 <li class="toctree-l1"><a class="reference internal" href="docs/DeveloperGuide_ZH.html">开发者指南</a></li>
 <li class="toctree-l1"><a class="reference internal" href="docs/Distributed_ZH.html">Data-Juicer 分布式数据处理</a></li>
@@ -239,6 +239,7 @@
 <li class="toctree-l1"><a class="reference internal" href="tools/hpo/README_ZH.html">数据菜谱的自动化超参优化</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tools/humanops/README.html">Label Studio Service Utility</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tools/mm_eval/inception_metrics/README_ZH.html">视频生成测评工具</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tools/mm_eval/vbench_metrics/README_ZH.html">VBench metrics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tools/postprocess/README_ZH.html">Postprocess tools</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tools/preprocess/README_ZH.html">预处理工具</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tools/quality_classifier/README_ZH.html">给数据打分</a></li>
@@ -251,72 +252,57 @@
 <p class="caption" role="heading"><span class="caption-text">API Reference</span></p>
 <ul>
 <li class="toctree-l1 has-children"><a class="reference internal" href="api.html">API Reference</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of API Reference</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l2 has-children"><a class="reference internal" href="data_juicer.core.html">data_juicer.core package</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle navigation of data_juicer.core package</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="data_juicer.core.data.html">data_juicer.core.data package</a></li>
-<li class="toctree-l3"><a class="reference internal" href="data_juicer.core.executor.html">data_juicer.core.executor package</a></li>
-</ul>
-</li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="data_juicer.ops.html">data_juicer.ops package</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle navigation of data_juicer.ops package</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="data_juicer.ops.aggregator.html">data_juicer.ops.aggregator package</a></li>
-<li class="toctree-l3"><a class="reference internal" href="data_juicer.ops.common.html">data_juicer.ops.common package</a></li>
-<li class="toctree-l3"><a class="reference internal" href="data_juicer.ops.deduplicator.html">data_juicer.ops.deduplicator package</a></li>
-<li class="toctree-l3"><a class="reference internal" href="data_juicer.ops.filter.html">data_juicer.ops.filter package</a></li>
-<li class="toctree-l3"><a class="reference internal" href="data_juicer.ops.grouper.html">data_juicer.ops.grouper package</a></li>
-<li class="toctree-l3 has-children"><a class="reference internal" href="data_juicer.ops.mapper.html">data_juicer.ops.mapper package</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle navigation of data_juicer.ops.mapper package</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l4"><a class="reference internal" href="data_juicer.ops.mapper.annotation.html">data_juicer.ops.mapper.annotation package</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="data_juicer.ops.selector.html">data_juicer.ops.selector package</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="data_juicer.ops.filter.html">data_juicer.ops.filter package</a></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="data_juicer.ops.mapper.html">data_juicer.ops.mapper package</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" role="switch" type="checkbox"/><label for="toctree-checkbox-5"><div class="visually-hidden">Toggle navigation of data_juicer.ops.mapper package</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="data_juicer.ops.mapper.annotation.html">data_juicer.ops.mapper.annotation package</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="data_juicer.ops.deduplicator.html">data_juicer.ops.deduplicator package</a></li>
-<li class="toctree-l2"><a class="reference internal" href="data_juicer.ops.selector.html">data_juicer.ops.selector package</a></li>
-<li class="toctree-l2"><a class="reference internal" href="data_juicer.ops.common.html">data_juicer.ops.common package</a></li>
-<li class="toctree-l2"><a class="reference internal" href="data_juicer.analysis.html">data_juicer.analysis package</a></li>
-<li class="toctree-l2"><a class="reference internal" href="data_juicer.config.html">data_juicer.config package</a></li>
-<li class="toctree-l2"><a class="reference internal" href="data_juicer.format.html">data_juicer.format package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/data_juicer.core.html">data_juicer.core</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/data_juicer.ops.html">data_juicer.ops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/data_juicer.ops.filter.html">data_juicer.ops.filter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/data_juicer.ops.mapper.html">data_juicer.ops.mapper</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/data_juicer.ops.deduplicator.html">data_juicer.ops.deduplicator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/data_juicer.ops.selector.html">data_juicer.ops.selector</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/data_juicer.ops.common.html">data_juicer.ops.common</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/data_juicer.analysis.html">data_juicer.analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/data_juicer.config.html">data_juicer.config</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/data_juicer.format.html">data_juicer.format</a></li>
 </ul>
 </li>
 </ul>
 
 </div></div><div class="sidebar-bottom-menu">
-    <div class="current-info">
-        <span class="current-lang">zh-CN</span>|<span class="current-version">main</span>
+  <div class="current-info">
+    <span class="current-lang">zh-CN</span>|<span class="current-version">main</span>
+  </div>
+  <div class="dropdown-panel">
+    
+    <div class="section">
+      <dt>Language</dt>
+      <dd>
+        
+        <a href="./../../en/main/README.html"
+          >
+          English
+        </a>
+        
+        <a href="./../../zh_CN/main/README_ZH.html"
+          >
+          简体中文
+        </a>
+        
+      </dd>
     </div>
-    <div class="dropdown-panel">
-        
-        <div class="section">
-            <dt>Language</dt>
-            <dd>
-                
-                <a href="./../../en/main/README.html"
-                    >
-                    English
-                </a>
-                
-                <a href="./../../zh_CN/main/README_ZH.html"
-                    >
-                    简体中文
-                </a>
-                
-            </dd>
-        </div>
-        
+    
 
+    
+    <div class="section version">
+      <dt>Version</dt>
+      <dd>
         
-        <div class="section">
-            <dt>Version</dt>
-            <dd>
-                    <a href="README_ZH.html">main</a>
-            </dd>
-        </div>
+        <a href="./../main/README_ZH.html" class="active" >
+          main
+        </a>
         
+      </dd>
     </div>
+    
+  </div>
 </div>
       </div>
       
@@ -372,9 +358,19 @@
 <a class="reference internal" href="docs/Operators.html"><span class="std std-doc"><img alt="算子池" src="https://img.shields.io/badge/%E6%96%87%E6%A1%A3-%E7%AE%97%E5%AD%90%E6%B1%A0-blue?logo=Markdown" /></span></a>
 <a class="reference external" href="https://arxiv.org/abs/2309.02033"><img alt="Paper" src="http://img.shields.io/badge/cs.LG-1.0Paper(SIGMOD'24)-B31B1B?logo=arxiv&amp;logoColor=red" /></a>
 <a class="reference external" href="https://arxiv.org/abs/2501.14755"><img alt="Paper" src="http://img.shields.io/badge/cs.AI-2.0Paper-B31B1B?logo=arxiv&amp;logoColor=red" /></a></p>
-<p>Data-Juicer 是一个一站式系统，面向大模型的文本及多模态数据处理。我们提供了一个基于 JupyterLab 的 <a class="reference external" href="http://8.138.149.181/">Playground</a>，您可以从浏览器中在线试用 Data-Juicer。 如果Data-Juicer对您的研发有帮助，请支持加星（自动订阅我们的新发布）、以及引用我们的<a class="reference internal" href="#id6">工作</a> 。</p>
-<p><a class="reference external" href="https://www.aliyun.com/product/bigdata/learn">阿里云人工智能平台 PAI</a> 已引用Data-Juicer并将其能力集成到PAI的数据处理产品中。PAI提供包含数据集管理、算力管理、模型工具链、模型开发、模型训练、模型部署、AI资产管理在内的功能模块，为用户提供高性能、高稳定、企业级的大模型工程化能力。数据处理的使用文档请参考：<a class="reference external" href="https://help.aliyun.com/zh/pai/user-guide/components-related-to-data-processing-for-foundation-models/?spm=a2c4g.11186623.0.0.3e9821a69kWdvX">PAI-大模型数据处理</a>。</p>
-<p>Data-Juicer正在积极更新和维护中，我们将定期强化和新增更多的功能和数据菜谱。热烈欢迎您加入我们（issues/PRs/<a class="reference external" href="https://join.slack.com/t/data-juicer/shared_invite/zt-23zxltg9d-Z4d3EJuhZbCLGwtnLWWUDg?spm=a2c22.12281976.0.0.7a8275bc8g7ypp">Slack频道</a> /<a class="reference external" href="https://qr.dingtalk.com/action/joingroup?code=v1,k1,YFIXM2leDEk7gJP5aMC95AfYT+Oo/EP/ihnaIEhMyJM=&amp;amp;_dt_no_comment=1&amp;amp;origin=11">钉钉群</a>/...），一起推进大模型的数据-模型协同开发和研究应用！</p>
+<p>Data-Juicer 是一个一站式系统，面向大模型的文本及多模态数据处理。我们提供了一个基于 JupyterLab 的 <a class="reference external" href="http://8.138.149.181/">Playground</a>，您可以从浏览器中在线试用 Data-Juicer。 如果Data-Juicer对您的研发有帮助，请支持加星（自动订阅我们的新发布）、以及引用我们的<a class="reference internal" href="#id5">工作</a> 。</p>
+<p><a class="reference external" href="https://www.aliyun.com/product/bigdata/learn">阿里云人工智能平台 PAI</a> 已深度集成Data-Juicer到其数据处理产品中。PAI提供包含数据集管理、算力管理、模型工具链、模型开发、模型训练、模型部署、AI资产管理在内的功能模块，为用户提供高性能、高稳定、企业级的大模型工程化能力。数据处理的使用文档请参考：<a class="reference external" href="https://help.aliyun.com/zh/pai/user-guide/components-related-to-data-processing-for-foundation-models/?spm=a2c4g.11186623.0.0.3e9821a69kWdvX">PAI-大模型数据处理</a>。</p>
+<p>Data-Juicer正在积极更新和维护中，我们将定期强化和新增更多的功能和数据菜谱。热烈欢迎您<a class="reference internal" href="#id4">加入我们</a>，一起推进大模型的数据-模型协同开发和研究应用！</p>
+<p>[Demo Video] DataJuicer-Agent:数据处理，即刻启程！</p>
+<p><video controls width="100%" height="auto" playsinline>
+  <source src="https://github.com/user-attachments/assets/6eb726b7-6054-4b0c-905e-506b2b9c7927" type="video/mp4">
+  Your browser does not support the video tag.
+</video></p>
+<p>[Demo Video] DataJuicer-Sandbox: 降本增效，优化数据-模型协同开发！</p>
+<p><video controls width="100%" height="auto" playsinline>
+  <source src="https://github.com/user-attachments/assets/a45f0eee-0f0e-4ffe-9a42-d9a55370089d" type="video/mp4">
+  Your browser does not support the video tag.
+</video></p>
 <hr class="docutils" />
 <section id="id1">
 <h2>新消息<a class="headerlink" href="#id1" title="Link to this heading">¶</a></h2>
@@ -416,7 +412,7 @@
 </section>
 <section id="data-juicer">
 <h2>为什么选择 Data-Juicer？<a class="headerlink" href="#data-juicer" title="Link to this heading">¶</a></h2>
-<img src="https://img.alicdn.com/imgextra/i2/O1CN01EteoQ31taUweAW1UE_!!6000000005918-2-tps-4034-4146.png" align="center" width="600" />
+<img src="https://img.alicdn.com/imgextra/i4/O1CN015URK6i21KU3XdkUpK_!!6000000006966-2-tps-3994-3956.png" align="center" width="500" />
 <ul class="simple">
 <li><p><strong>系统化和可重用</strong>：
 系统化地为用户提供 100 多个核心 <a class="reference internal" href="docs/Operators.html"><span class="std std-doc">算子</span></a> 和 50 多个可重用的数据菜谱和
@@ -451,6 +447,7 @@
 <li><p><a class="reference internal" href="docs/DeveloperGuide_ZH.html"><span class="std std-doc">开发者指南</span></a></p></li>
 <li><p><a class="reference internal" href="docs/Distributed_ZH.html"><span class="std std-doc">Data-Juicer分布式数据处理</span></a></p></li>
 <li><p><a class="reference internal" href="docs/Sandbox_ZH.html"><span class="std std-doc">沙盒实验室</span></a></p></li>
+<li><p><a class="reference internal" href="docs/DJ_agent_ZH.html"><span class="std std-doc">Data-Juicer Agent</span></a></p></li>
 </ul>
 </li>
 <li><p>Demos</p>
@@ -499,16 +496,19 @@
 <p>Data-Juicer 在 Apache License 2.0 协议下发布。</p>
 </section>
 <section id="id4">
-<h2>贡献<a class="headerlink" href="#id4" title="Link to this heading">¶</a></h2>
-<p>大模型是一个高速发展的领域，我们非常欢迎贡献新功能、修复漏洞以及文档改善。请参考<a class="reference internal" href="docs/DeveloperGuide_ZH.html"><span class="std std-doc">开发者指南</span></a>。</p>
+<h2>贡献与致谢<a class="headerlink" href="#id4" title="Link to this heading">¶</a></h2>
+<p>Data-Juicer 的发展离不开社区的参与和反馈，非常欢迎各方面的贡献：开发新的算子（无论是简单函数还是现有论文的先进算法）、分享新的数据菜谱和使用场景、提出新功能需求、提升代码效率、修复程序错误、完善项目文档、反馈使用体验等。您可参考<a class="reference internal" href="docs/DeveloperGuide_ZH.html"><span class="std std-doc">开发者指南</span></a>开启贡献；在社区中宣传本项目，或为我们的代码仓库点亮星标 ⭐，同样是对该项目非常宝贵的支持！</p>
+<p>我们由衷感谢所有为本项目做出贡献的<a class="reference external" href="https://github.com/modelscope/data-juicer/graphs/contributors">代码贡献者</a>，他们是本项目的基石。我们尽力确保以下名单的完整和及时，并期待更多名字的加入（英文字母序排列）。若有疏漏，请随时联系我们。</p>
+<ul class="simple">
+<li><p><strong>发起方：</strong> 阿里巴巴通义实验室</p></li>
+<li><p><strong>联合研发优化：</strong> 阿里云PAI、Anyscale (Ray Team)、中山大学 (<a class="reference external" href="https://github.com/YingShen-SYSU/AIGC">知识工程实验室</a>)、NVIDIA (NeMo Team) 等</p></li>
+<li><p><strong>用户/提供无价反馈：</strong> <a class="reference external" href="https://github.com/agentscope-ai/agentscope">AgentScope</a>、阿里巴巴集团、蚂蚁集团、比亚迪、字节跳动、<a class="reference external" href="https://github.com/modelscope/DiffSynth-Studio">DiffSynth-Studio</a>、<a class="reference external" href="https://github.com/aigc-apps/EasyAnimate">EasyAnimate</a>、<a class="reference external" href="https://github.com/modelscope/evalscope">Eval-Scope</a>、京东、<a class="reference external" href="https://github.com/hiyouga/LLaMA-Factory">LLaMA-Factory</a>、南京大学、OPPO、北京大学、<a class="reference external" href="https://github.com/modelscope/RM-Gallery">RM-Gallery</a>、中国人民大学、清华大学、<a class="reference external" href="https://github.com/modelscope/Trinity-RFT">Trinity-RFT</a>、中国科学院、中国科学院大学、小红书、小米、喜马拉雅、浙江大学等</p></li>
+<li><p><strong>其它项目：</strong> Data-Juicer 也感谢许多先驱开源项目，例如 <a class="reference external" href="https://github.com/apache/arrow">Apache Arrow</a>、<a class="reference external" href="https://huggingface.co/bigscience/bloom">BLOOM</a>、<a class="reference external" href="https://github.com/huggingface/datasets">Hugging Face Datasets</a>、<a class="reference external" href="https://github.com/togethercomputer/RedPajama-Data/tree/rp_v1">RedPajama-Data</a>、<a class="reference external" href="https://github.com/ray-project/ray">Ray</a>、<a class="reference external" href="https://github.com/vllm-project/vllm">vLLM</a> 等</p></li>
+</ul>
+<p>我们期待您的反馈与合作。如您有合作意向或关于新子项目的提案，欢迎通过 GitHub Issues、Pull Requests、<a class="reference external" href="https://join.slack.com/t/data-juicer/shared_invite/zt-23zxltg9d-Z4d3EJuhZbCLGwtnLWWUDg?spm=a2c22.12281976.0.0.7a8253f30mgpjw">Slack</a> 频道、<a class="reference external" href="https://qr.dingtalk.com/action/joingroup?code=v1,k1,YFIXM2leDEk7gJP5aMC95AfYT+Oo/EP/ihnaIEhMyJM=&amp;amp;_dt_no_comment=1&amp;amp;origin=11">钉钉</a>群或<a class="reference external" href="https://github.com/modelscope/data-juicer/blob/main/mailto:datajuicer&#64;outlook.com">邮件</a>与我们联系。</p>
 </section>
 <section id="id5">
-<h2>致谢<a class="headerlink" href="#id5" title="Link to this heading">¶</a></h2>
-<p>Data-Juicer被许多大模型相关产品和研究工作所使用，例如阿里巴巴通义和阿里云人工智能平台 (PAI) 之上的工业界场景。 我们期待更多您的体验反馈、建议和合作共建！</p>
-<p>Data-Juicer 感谢社区<a class="reference external" href="https://github.com/modelscope/data-juicer/graphs/contributors">贡献者</a> 和相关的先驱开源项目，譬如<a class="reference external" href="https://github.com/huggingface/datasets">Huggingface-Datasets</a>, <a class="reference external" href="https://huggingface.co/bigscience/bloom">Bloom</a>, <a class="reference external" href="https://github.com/togethercomputer/RedPajama-Data/tree/rp_v1">RedPajama</a>, <a class="reference external" href="https://github.com/apache/arrow">Arrow</a>, <a class="reference external" href="https://github.com/ray-project/ray">Ray</a>, ....</p>
-</section>
-<section id="id6">
-<h2>参考文献<a class="headerlink" href="#id6" title="Link to this heading">¶</a></h2>
+<h2>参考文献<a class="headerlink" href="#id5" title="Link to this heading">¶</a></h2>
 <p>如果您发现Data-Juicer对您的研发有帮助，请引用以下工作，<a class="reference external" href="https://arxiv.org/abs/2309.02033">1.0paper</a>, <a class="reference external" href="https://arxiv.org/abs/2501.14755">2.0paper</a>。</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nd">@inproceedings</span><span class="p">{</span><span class="n">djv1</span><span class="p">,</span>
   <span class="n">title</span><span class="o">=</span><span class="p">{</span><span class="n">Data</span><span class="o">-</span><span class="n">Juicer</span><span class="p">:</span> <span class="n">A</span> <span class="n">One</span><span class="o">-</span><span class="n">Stop</span> <span class="n">Data</span> <span class="n">Processing</span> <span class="n">System</span> <span class="k">for</span> <span class="n">Large</span> <span class="n">Language</span> <span class="n">Models</span><span class="p">},</span>
@@ -584,9 +584,8 @@
 <li><a class="reference internal" href="#data-juicer">为什么选择 Data-Juicer？</a></li>
 <li><a class="reference internal" href="#id2">文档</a></li>
 <li><a class="reference internal" href="#id3">开源协议</a></li>
-<li><a class="reference internal" href="#id4">贡献</a></li>
-<li><a class="reference internal" href="#id5">致谢</a></li>
-<li><a class="reference internal" href="#id6">参考文献</a></li>
+<li><a class="reference internal" href="#id4">贡献与致谢</a></li>
+<li><a class="reference internal" href="#id5">参考文献</a></li>
 </ul>
 </li>
 </ul>
@@ -599,10 +598,10 @@
     </aside>
   </div>
 </div>
-<script src="_static/documentation_options.js?v=2491dde2"></script>
+<script src="_static/documentation_options.js?v=011da5d6"></script>
     <script src="_static/doctools.js?v=9bcbadda"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script src="_static/scripts/furo.js?v=5fa4622c"></script>
+    <script src="_static/scripts/furo.js?v=46bd48cc"></script>
     <script src="_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="_static/copybutton.js?v=f281be69"></script>
     <script src="_static/translations.js?v=beaddf03"></script>
