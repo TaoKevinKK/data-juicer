@@ -1,14 +1,14 @@
 <!doctype html>
 <html class="no-js" lang="en" data-content_root="./">
-  <head><meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <head><meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="DJ-Cookbook" href="docs/tutorial/DJ-Cookbook.html" />
+<link rel="index" title="Index" href="genindex.html"><link rel="search" title="Search" href="search.html"><link rel="next" title="DJ-Cookbook" href="docs/tutorial/DJ-Cookbook.html">
 
-    <!-- Generated with Sphinx 8.2.3 and Furo 2025.07.19 -->
+    <!-- Generated with Sphinx 8.2.3 and Furo 2025.09.25 -->
         <title>Data Juicer</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=d111a655" />
-    <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?v=25af2a20" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?v=580074bf" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?v=8dab3a3b" />
     <link rel="stylesheet" type="text/css" href="_static/sidebar-menu.css?v=aecff795" />
@@ -24,14 +24,14 @@
   }
   @media not print {
     body[data-theme="dark"] {
-      --color-code-background: #2b2b2b;
-  --color-code-foreground: #f8f8f2;
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
   
     }
     @media (prefers-color-scheme: dark) {
       body:not([data-theme="light"]) {
-        --color-code-background: #2b2b2b;
-  --color-code-foreground: #f8f8f2;
+        --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
   
       }
     }
@@ -148,14 +148,10 @@
   </symbol>
 </svg>
 
-<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
-<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
-<label class="overlay sidebar-overlay" for="__navigation">
-  <div class="visually-hidden">Hide navigation sidebar</div>
-</label>
-<label class="overlay toc-overlay" for="__toc">
-  <div class="visually-hidden">Hide table of contents sidebar</div>
-</label>
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle site navigation sidebar">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc" aria-label="Toggle table of contents sidebar">
+<label class="overlay sidebar-overlay" for="__navigation"></label>
+<label class="overlay toc-overlay" for="__toc"></label>
 
 <a class="skip-to-content muted-link" href="#furo-main-content">Skip to content</a>
 
@@ -165,8 +161,7 @@
   <header class="mobile-header">
     <div class="header-left">
       <label class="nav-overlay-icon" for="__navigation">
-        <div class="visually-hidden">Toggle site navigation sidebar</div>
-        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+        <span class="icon"><svg><use href="#svg-menu"></use></svg></span>
       </label>
     </div>
     <div class="header-center">
@@ -174,8 +169,7 @@
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
-        <button class="theme-toggle">
-          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+        <button class="theme-toggle" aria-label="Toggle Light / Dark / Auto color theme">
           <svg class="theme-icon-when-auto-light"><use href="#svg-sun-with-moon"></use></svg>
           <svg class="theme-icon-when-auto-dark"><use href="#svg-moon-with-sun"></use></svg>
           <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
@@ -183,8 +177,7 @@
         </button>
       </div>
       <label class="toc-overlay-icon toc-header-icon" for="__toc">
-        <div class="visually-hidden">Toggle table of contents sidebar</div>
-        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+        <span class="icon"><svg><use href="#svg-toc"></use></svg></span>
       </label>
     </div>
   </header>
@@ -249,7 +242,7 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">API Reference</span></p>
 <ul>
-<li class="toctree-l1 has-children"><a class="reference internal" href="api.html">API Reference</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of API Reference</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="api.html">API Reference</a><input aria-label="Toggle navigation of API Reference" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="api/data_juicer.core.html">data_juicer.core</a></li>
 <li class="toctree-l2"><a class="reference internal" href="api/data_juicer.ops.html">data_juicer.ops</a></li>
 <li class="toctree-l2"><a class="reference internal" href="api/data_juicer.ops.filter.html">data_juicer.ops.filter</a></li>
@@ -323,8 +316,7 @@
   </a>
 </div>
 <div class="theme-toggle-container theme-toggle-content">
-            <button class="theme-toggle">
-              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+            <button class="theme-toggle" aria-label="Toggle Light / Dark / Auto color theme">
               <svg class="theme-icon-when-auto-light"><use href="#svg-sun-with-moon"></use></svg>
               <svg class="theme-icon-when-auto-dark"><use href="#svg-moon-with-sun"></use></svg>
               <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
@@ -332,8 +324,7 @@
             </button>
           </div>
           <label class="toc-overlay-icon toc-content-icon" for="__toc">
-            <div class="visually-hidden">Toggle table of contents sidebar</div>
-            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+            <span class="icon"><svg><use href="#svg-toc"></use></svg></span>
           </label>
         </div>
         <article role="main" id="furo-main-content">
@@ -373,6 +364,8 @@ We provide a <a class="reference external" href="http://8.138.149.181/">playgrou
 <section id="news">
 <h2>News<a class="headerlink" href="#news" title="Link to this heading">¶</a></h2>
 <ul class="simple">
+<li><p>🎉 [2025-09-19] Our work of <a class="reference external" href="https://arxiv.org/abs/2501.14755">Data-Juicer 2.0: Cloud-Scale Adaptive Data Processing for and with Foundation Models</a> has been accepted as a <strong>NeurIPS’25 Spotlight</strong> (top 3.1% of all submissions)!</p></li>
+<li><p>🎉 [2025-09-19] Our two works regarding data mixture/selection/synthesis: <a class="reference external" href="https://arxiv.org/abs/2502.04380">Diversity as a Reward: Fine-Tuning LLMs on a Mixture of Domain-Undetermined Data</a> and <a class="reference external" href="https://arxiv.org/abs/2503.09499">MindGYM: What Matters in Question Synthesis for Thinking-Centric Fine-Tuning?</a> have been accepted by <strong>NeurIPS’25</strong>!</p></li>
 <li><p>🛠️ [2025-06-04] How to process feedback data in the “era of experience”? We propose <a class="reference external" href="https://arxiv.org/abs/2505.17826">Trinity-RFT: A General-Purpose and Unified Framework for Reinforcement Fine-Tuning of LLMs</a>, which leverages Data-Juicer for its data pipelines tailored for RFT scenarios.</p></li>
 <li><p>🎉 [2025-06-04] Our <a class="reference external" href="https://ieeexplore.ieee.org/document/11027559">Data-Model Co-development Survey</a> has been accepted by IEEE Transactions on Pattern Analysis and Machine Intelligence (<strong>TPAMI</strong>)! Welcome to explore and contribute the <a class="reference external" href="https://modelscope.github.io/data-juicer/en/main/docs/awesome_llm_data.html">awesome-list</a>.</p></li>
 <li><p>🔎 [2025-06-04] We introduce <a class="reference external" href="https://www.arxiv.org/abs/2505.16915">DetailMaster: Can Your Text-to-Image Model Handle Long Prompts?</a> A synthetic benchmark revealing notable performance drops despite large models’ proficiency with short descriptions.</p></li>
@@ -381,13 +374,13 @@ We provide a <a class="reference external" href="http://8.138.149.181/">playgrou
 <li><p>🤝 [2025-02-28] DJ has been integrated in <a class="reference external" href="https://docs.ray.io/en/latest/ray-overview/ray-libraries.html">Ray’s official Ecosystem</a> and <a class="reference external" href="https://docs.ray.io/en/latest/ray-more-libs/data_juicer_distributed_data_processing.html">Example Gallery</a>. Besides, our patch in DJ2.0 for the streaming JSON reader has been officially integrated by <a class="reference external" href="https://github.com/apache/arrow/pull/45084">Apache Arrow</a>.</p></li>
 <li><p>🎉 [2025-02-27] Our work on contrastive data synthesis, <a class="reference external" href="https://arxiv.org/pdf/2408.04594">ImgDiff</a>, has been accepted by <strong>CVPR’25</strong>!</p></li>
 <li><p>💡 [2025-02-05] We propose a new data selection method, <a class="reference external" href="https://www.arxiv.org/abs/2502.04380">Diversity as a Reward: Fine-Tuning LLMs on a Mixture of Domain-Undetermined Data</a>. It is theoretically informed, via treating diversity as a reward, achieves better overall performance across 7 benchmarks when post-training SOTA LLMs.</p></li>
-<li><p>🚀 [2025-01-11] We release our 2.0 paper, <a class="reference external" href="https://arxiv.org/abs/2501.14755">Data-Juicer 2.0: Cloud-Scale Adaptive Data Processing for Foundation Models</a>. It now can process 70B data samples within 2.1h, using 6400 CPU cores on 50 Ray nodes from Alibaba Cloud cluster, and deduplicate 5TB data within 2.8h using 1280 CPU cores on 8 Ray nodes.</p></li>
-<li><p>🛠️ [2025-01-03] We support post-tuning scenarios better, via 20+ related new <a class="reference external" href="https://github.com/modelscope/data-juicer/releases/tag/v1.0.2">OPs</a>, and via unified <a class="reference external" href="https://github.com/modelscope/data-juicer/releases/tag/v1.0.3">dataset format</a> compatible to LLaMA-Factory and ModelScope-Swift.</p></li>
+<li><p>🎉 [2025-01-11] We release our 2.0 paper, <a class="reference external" href="https://arxiv.org/abs/2501.14755">Data-Juicer 2.0: Cloud-Scale Adaptive Data Processing for and with Foundation Models</a>. It now can process 70B data samples within 2.1h, using 6400 CPU cores on 50 Ray nodes from Alibaba Cloud cluster, and deduplicate 5TB data within 2.8h using 1280 CPU cores on 8 Ray nodes.</p></li>
 </ul>
 <details>
 <summary> History News:
 </summary>>
 <ul class="simple">
+<li><p>[2025-01-03] We support post-tuning scenarios better, via 20+ related new <a class="reference external" href="https://github.com/modelscope/data-juicer/releases/tag/v1.0.2">OPs</a>, and via unified <a class="reference external" href="https://github.com/modelscope/data-juicer/releases/tag/v1.0.3">dataset format</a> compatible to LLaMA-Factory and ModelScope-Swift.</p></li>
 <li><p>[2024-12-17] We propose <em>HumanVBench</em>, which comprises 16 human-centric tasks with synthetic data, benchmarking 22 video-MLLMs’ capabilities from views of inner emotion and outer manifestations. See more details in our <a class="reference external" href="https://arxiv.org/abs/2412.17574">paper</a>, and try to <a class="reference external" href="https://github.com/modelscope/data-juicer/tree/HumanVBench">evaluate</a> your models with it.</p></li>
 <li><p>[2024-11-22] We release DJ <a class="reference external" href="https://github.com/modelscope/data-juicer/releases/tag/v1.0.0">v1.0.0</a>, in which we refactored Data-Juicer’s <em>Operator</em>, <em>Dataset</em>, <em>Sandbox</em> and many other modules for better usability, such as supporting fault-tolerant, FastAPI and adaptive resource management.</p></li>
 <li><p>[2024-08-25] We give a <a class="reference external" href="https://modelscope.github.io/data-juicer/_static/tutorial_kdd24.html">tutorial</a> about data processing for multimodal LLMs in KDD’2024.</p></li>
@@ -412,13 +405,16 @@ visit the competition’s official websites, FT-Data Ranker (<a class="reference
 <section id="why-data-juicer">
 <h2>Why Data-Juicer?<a class="headerlink" href="#why-data-juicer" title="Link to this heading">¶</a></h2>
 <img src="https://img.alicdn.com/imgextra/i4/O1CN015URK6i21KU3XdkUpK_!!6000000006966-2-tps-3994-3956.png" align="center" width="500" />
-<ul class="simple">
+<ul>
 <li><p><strong>Systematic &amp; Reusable</strong>:
 Empowering users with a systematic library of 100+ core <a class="reference internal" href="docs/Operators.html"><span class="std std-doc">OPs</span></a>, and 50+ reusable config recipes and
 dedicated toolkits, designed to
 function independently of specific multimodal LLM datasets and processing pipelines. Supporting data analysis, cleaning, and synthesis in pre-training, post-tuning, en, zh, and more scenarios.</p></li>
 <li><p><strong>User-Friendly &amp; Extensible</strong>:
-Designed for simplicity and flexibility, with easy-start <a class="reference internal" href="docs/tutorial/QuickStart.html"><span class="std std-doc">guides</span></a>, and <a class="reference internal" href="docs/tutorial/DJ-Cookbook.html"><span class="std std-doc">DJ-Cookbook</span></a> containing fruitful demo usages. Feel free to <a class="reference internal" href="docs/DeveloperGuide.html#build-your-own-ops"><span class="std std-ref">implement your own OPs</span></a> for customizable data processing.</p></li>
+Designed for simplicity and flexibility, with easy-start <a class="reference internal" href="docs/tutorial/QuickStart.html"><span class="std std-doc">guides</span></a>, and <a class="reference internal" href="docs/tutorial/DJ-Cookbook.html"><span class="std std-doc">DJ-Cookbook</span></a> containing fruitful demo usages. Feel free to <a class="reference internal" href="docs/DeveloperGuide.html#build-your-own-ops"><span class="std std-ref">implement your own OPs</span></a> for customizable data processing.</p>
+<p>Data-Juicer now uses AI to automatically rewrite and optimize operator docstrings, generating detailed operator documentation to help users quickly understand the functionality and usage of each operator.
+For details about the implementation of this documentation enhancement workflow, please visit the <a class="reference external" href="https://github.com/modelscope/data-juicer/tree/dj_agents/demos/op_doc_enhance_workflow">demos/op_doc_enhance_workflow folder under the <code class="docutils literal notranslate"><span class="pre">dj_agents</span></code> branch</a>.</p>
+</li>
 <li><p><strong>Efficient &amp; Robust</strong>: Providing performance-optimized <a class="reference internal" href="docs/Distributed.html"><span class="std std-doc">parallel data processing</span></a> (Aliyun-PAI\Ray\CUDA\OP Fusion),
 faster with less resource usage, verified in large-scale production environments.</p></li>
 <li><p><strong>Effect-Proven &amp; Sandbox</strong>: Supporting data-model co-development, enabling rapid iteration
@@ -514,10 +510,10 @@ through the <a class="reference internal" href="docs/Sandbox.html"><span class="
 <span class="p">}</span>
 
 <span class="nd">@article</span><span class="p">{</span><span class="n">djv2</span><span class="p">,</span>
-  <span class="n">title</span><span class="o">=</span><span class="p">{</span><span class="n">Data</span><span class="o">-</span><span class="n">Juicer</span> <span class="mf">2.0</span><span class="p">:</span> <span class="n">Cloud</span><span class="o">-</span><span class="n">Scale</span> <span class="n">Adaptive</span> <span class="n">Data</span> <span class="n">Processing</span> <span class="k">for</span> <span class="n">Foundation</span> <span class="n">Models</span><span class="p">},</span>
-  <span class="n">author</span><span class="o">=</span><span class="p">{</span><span class="n">Chen</span><span class="p">,</span> <span class="n">Daoyuan</span> <span class="ow">and</span> <span class="n">Huang</span><span class="p">,</span> <span class="n">Yilun</span> <span class="ow">and</span> <span class="n">Pan</span><span class="p">,</span> <span class="n">Xuchen</span> <span class="ow">and</span> <span class="n">Jiang</span><span class="p">,</span> <span class="n">Nana</span> <span class="ow">and</span> <span class="n">Wang</span><span class="p">,</span> <span class="n">Haibin</span> <span class="ow">and</span> <span class="n">Ge</span><span class="p">,</span> <span class="n">Ce</span> <span class="ow">and</span> <span class="n">Chen</span><span class="p">,</span> <span class="n">Yushuo</span> <span class="ow">and</span> <span class="n">Zhang</span><span class="p">,</span> <span class="n">Wenhao</span> <span class="ow">and</span> <span class="n">Ma</span><span class="p">,</span> <span class="n">Zhijian</span> <span class="ow">and</span> <span class="n">Zhang</span><span class="p">,</span> <span class="n">Yilei</span> <span class="ow">and</span> <span class="n">Huang</span><span class="p">,</span> <span class="n">Jun</span> <span class="ow">and</span> <span class="n">Lin</span><span class="p">,</span> <span class="n">Wei</span> <span class="ow">and</span> <span class="n">Li</span><span class="p">,</span> <span class="n">Yaliang</span> <span class="ow">and</span> <span class="n">Ding</span><span class="p">,</span> <span class="n">Bolin</span> <span class="ow">and</span> <span class="n">Zhou</span><span class="p">,</span> <span class="n">Jingren</span><span class="p">},</span>
-  <span class="n">journal</span><span class="o">=</span><span class="p">{</span><span class="n">arXiv</span> <span class="n">preprint</span> <span class="n">arXiv</span><span class="p">:</span><span class="mf">2501.14755</span><span class="p">},</span>
-  <span class="n">year</span><span class="o">=</span><span class="p">{</span><span class="mi">2024</span><span class="p">}</span>
+  <span class="n">title</span><span class="o">=</span><span class="p">{</span><span class="n">Data</span><span class="o">-</span><span class="n">Juicer</span> <span class="mf">2.0</span><span class="p">:</span> <span class="n">Cloud</span><span class="o">-</span><span class="n">Scale</span> <span class="n">Adaptive</span> <span class="n">Data</span> <span class="n">Processing</span> <span class="k">for</span> <span class="ow">and</span> <span class="k">with</span> <span class="n">Foundation</span> <span class="n">Models</span><span class="p">},</span>
+  <span class="n">author</span><span class="o">=</span><span class="p">{</span><span class="n">Chen</span><span class="p">,</span> <span class="n">Daoyuan</span> <span class="ow">and</span> <span class="n">Huang</span><span class="p">,</span> <span class="n">Yilun</span> <span class="ow">and</span> <span class="n">Pan</span><span class="p">,</span> <span class="n">Xuchen</span> <span class="ow">and</span> <span class="n">Jiang</span><span class="p">,</span> <span class="n">Nana</span> <span class="ow">and</span> <span class="n">Wang</span><span class="p">,</span> <span class="n">Haibin</span> <span class="ow">and</span> <span class="n">Zhang</span><span class="p">,</span> <span class="n">Yilei</span> <span class="ow">and</span> <span class="n">Ge</span><span class="p">,</span> <span class="n">Ce</span> <span class="ow">and</span> <span class="n">Chen</span><span class="p">,</span> <span class="n">Yushuo</span> <span class="ow">and</span> <span class="n">Zhang</span><span class="p">,</span> <span class="n">Wenhao</span> <span class="ow">and</span> <span class="n">Ma</span><span class="p">,</span> <span class="n">Zhijian</span> <span class="ow">and</span> <span class="n">Huang</span><span class="p">,</span> <span class="n">Jun</span> <span class="ow">and</span> <span class="n">Lin</span><span class="p">,</span> <span class="n">Wei</span> <span class="ow">and</span> <span class="n">Li</span><span class="p">,</span> <span class="n">Yaliang</span> <span class="ow">and</span> <span class="n">Ding</span><span class="p">,</span> <span class="n">Bolin</span> <span class="ow">and</span> <span class="n">Zhou</span><span class="p">,</span> <span class="n">Jingren</span><span class="p">},</span>
+  <span class="n">journal</span><span class="o">=</span><span class="p">{</span><span class="n">Advances</span> <span class="ow">in</span> <span class="n">Neural</span> <span class="n">Information</span> <span class="n">Processing</span> <span class="n">Systems</span><span class="p">},</span>
+  <span class="n">year</span><span class="o">=</span><span class="p">{</span><span class="mi">2025</span><span class="p">}</span>
 <span class="p">}</span>
 </pre></div>
 </div>
@@ -528,10 +524,10 @@ through the <a class="reference internal" href="docs/Sandbox.html"><span class="
 <li><p>(ICML’25 Spotlight) <a class="reference external" href="https://arxiv.org/abs/2407.11784">Data-Juicer Sandbox: A Feedback-Driven Suite for Multimodal Data-Model Co-development</a></p></li>
 <li><p>(CVPR’25) <a class="reference external" href="https://arxiv.org/abs/2408.04594">ImgDiff: Contrastive Data Synthesis for Vision Large Language Models</a></p></li>
 <li><p>(TPAMI’25) <a class="reference external" href="https://arxiv.org/abs/2407.08583">The Synergy between Data and Multi-Modal Large Language Models: A Survey from Co-Development Perspective</a></p></li>
+<li><p>(NeurIPS’25) <a class="reference external" href="https://arxiv.org/abs/2502.04380">Diversity as a Reward: Fine-Tuning LLMs on a Mixture of Domain-Undetermined Data</a></p></li>
+<li><p>(NeurIPS’25) <a class="reference external" href="https://arxiv.org/abs/2503.09499">MindGYM: What Matters in Question Synthesis for Thinking-Centric Fine-Tuning?</a></p></li>
 <li><p>(Benchmark Data) <a class="reference external" href="https://arxiv.org/abs/2412.17574">HumanVBench: Exploring Human-Centric Video Understanding Capabilities of MLLMs with Synthetic Benchmark Data</a></p></li>
 <li><p>(Benchmark Data) <a class="reference external" href="https://www.arxiv.org/abs/2505.16915">DetailMaster: Can Your Text-to-Image Model Handle Long Prompts?</a></p></li>
-<li><p>(Data Synthesis) <a class="reference external" href="https://www.arxiv.org/abs/2502.04380">Diversity as a Reward: Fine-Tuning LLMs on a Mixture of Domain-Undetermined Data</a></p></li>
-<li><p>(Data Synthesis) <a class="reference external" href="https://arxiv.org/abs/2503.09499">MindGYM: What Matters in Question Synthesis for Thinking-Centric Fine-Tuning?</a></p></li>
 <li><p>(Data Scaling) <a class="reference external" href="https://arxiv.org/abs/2405.14908">BiMix: A Bivariate Data Mixing Law for Language Model Pretraining</a></p></li>
 </ul>
 </details>
@@ -614,7 +610,7 @@ through the <a class="reference internal" href="docs/Sandbox.html"><span class="
     </aside>
   </div>
 </div>
-<script src="_static/documentation_options.js?v=02f2166e"></script>
+<script src="_static/documentation_options.js?v=a68a9277"></script>
     <script src="_static/doctools.js?v=9bcbadda"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/scripts/furo.js?v=46bd48cc"></script>
