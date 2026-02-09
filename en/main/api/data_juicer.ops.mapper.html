@@ -2795,7 +2795,7 @@ based on the <cite>keep_original_sample</cite> parameter. If both <cite>prompt</
 set, the <cite>prompt_key</cite> takes precedence.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="data_juicer.ops.mapper.ImageCaptioningMapper.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">hf_img2seq</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'Salesforce/blip2-opt-2.7b'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">trust_remote_code</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">caption_num</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Annotated</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Gt</span><span class="p"><span class="pre">(</span></span><span class="n"><span class="pre">gt</span></span><span class="o"><span class="pre">=</span></span><span class="m"><span class="pre">0</span></span><span class="p"><span class="pre">)</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">keep_candidate_mode</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'random_any'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">keep_original_sample</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prompt</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prompt_key</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/data_juicer/ops/mapper/image_captioning_mapper.html#ImageCaptioningMapper.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#data_juicer.ops.mapper.ImageCaptioningMapper.__init__" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">hf_img2seq</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'Salesforce/blip2-opt-2.7b'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">trust_remote_code</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">caption_num</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Annotated</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Gt</span><span class="p"><span class="pre">(</span></span><span class="n"><span class="pre">gt</span></span><span class="o"><span class="pre">=</span></span><span class="m"><span class="pre">0</span></span><span class="p"><span class="pre">)</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">keep_candidate_mode</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'random_any'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">keep_original_sample</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prompt</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prompt_key</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gpu_batch_size</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Annotated</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Gt</span><span class="p"><span class="pre">(</span></span><span class="n"><span class="pre">gt</span></span><span class="o"><span class="pre">=</span></span><span class="m"><span class="pre">0</span></span><span class="p"><span class="pre">)</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">8</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/data_juicer/ops/mapper/image_captioning_mapper.html#ImageCaptioningMapper.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#data_juicer.ops.mapper.ImageCaptioningMapper.__init__" title="Link to this definition">#</a></dt>
 <dd><p>Initialization method.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -2841,6 +2841,10 @@ prompt provided.</p></li>
 for each sample. It’s used for set different prompts for different
 samples. If it’s none, use prompt in parameter “prompt”. It’s None
 in default.</p></li>
+<li><p><strong>gpu_batch_size</strong> – the batch size for GPU inference. This controls
+how many images are processed together in a single GPU forward pass.
+Useful when the dataset batch size is larger than what the GPU can
+handle. Default is 8.</p></li>
 <li><p><strong>args</strong> – extra args</p></li>
 <li><p><strong>kwargs</strong> – extra args</p></li>
 </ul>
@@ -2851,7 +2855,11 @@ in default.</p></li>
 <dl class="py method">
 <dt class="sig sig-object py" id="data_juicer.ops.mapper.ImageCaptioningMapper.process_batched">
 <span class="sig-name descname"><span class="pre">process_batched</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">samples</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rank</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/data_juicer/ops/mapper/image_captioning_mapper.html#ImageCaptioningMapper.process_batched"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#data_juicer.ops.mapper.ImageCaptioningMapper.process_batched" title="Link to this definition">#</a></dt>
-<dd><div class="admonition note">
+<dd><p>Process a batch of samples with true GPU batching for caption generation.</p>
+<p>This method collects all images from all samples in the batch, generates
+captions for them in GPU-efficient sub-batches, and then distributes the
+captions back to their respective samples.</p>
+<div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This is a batched_OP, whose input and output type are
 both list. Suppose there are $N$ input sample list with batch
@@ -2862,10 +2870,13 @@ and $(1+M)Nb$ for ‘all’ mode.</p>
 </div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>samples</strong></p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>samples</strong> – Dict of lists containing the batch of samples.</p></li>
+<li><p><strong>rank</strong> – Optional GPU rank for distributed processing.</p></li>
+</ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p></p>
+<dd class="field-even"><p>Dict of lists containing the processed samples with generated captions.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -5143,6 +5154,120 @@ relative to the top-left corner, where x/y values are non-normalized.</p></li>
 </dd></dl>
 
 <dl class="py class">
+<dt class="sig sig-object py" id="data_juicer.ops.mapper.VideoCameraCalibrationStaticDeepcalibMapper">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">data_juicer.ops.mapper.</span></span><span class="sig-name descname"><span class="pre">VideoCameraCalibrationStaticDeepcalibMapper</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/data_juicer/ops/mapper/video_camera_calibration_static_deepcalib_mapper.html#VideoCameraCalibrationStaticDeepcalibMapper"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#data_juicer.ops.mapper.VideoCameraCalibrationStaticDeepcalibMapper" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <a class="reference internal" href="data_juicer.ops.base_op.html#data_juicer.ops.base_op.Mapper" title="data_juicer.ops.base_op.Mapper"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mapper</span></code></a></p>
+<p>Compute the camera intrinsics and field of view (FOV)
+for a static camera using DeepCalib.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="data_juicer.ops.mapper.VideoCameraCalibrationStaticDeepcalibMapper.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'weights_10_0.02.h5'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">frame_num</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Annotated</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Gt</span><span class="p"><span class="pre">(</span></span><span class="n"><span class="pre">gt</span></span><span class="o"><span class="pre">=</span></span><span class="m"><span class="pre">0</span></span><span class="p"><span class="pre">)</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">duration</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tag_field_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'static_camera_calibration_deepcalib_tags'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">frame_dir</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'/home/runner/.cache/data_juicer/assets'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">if_output_info</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_info_dir</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'/home/runner/.cache/data_juicer/assets'</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/data_juicer/ops/mapper/video_camera_calibration_static_deepcalib_mapper.html#VideoCameraCalibrationStaticDeepcalibMapper.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#data_juicer.ops.mapper.VideoCameraCalibrationStaticDeepcalibMapper.__init__" title="Link to this definition">#</a></dt>
+<dd><p>Initialization method.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>model_path</strong> – The path to the DeepCalib Regression model.</p></li>
+<li><p><strong>frame_num</strong> – The number of frames to be extracted uniformly from
+the video. If it’s 1, only the middle frame will be extracted. If
+it’s 2, only the first and the last frames will be extracted. If
+it’s larger than 2, in addition to the first and the last frames,
+other frames will be extracted uniformly within the video duration.
+If “duration” &gt; 0, frame_num is the number of frames per segment.</p></li>
+<li><p><strong>duration</strong> – The duration of each segment in seconds.
+If 0, frames are extracted from the entire video.
+If duration &gt; 0, the video is segmented into multiple segments
+based on duration, and frames are extracted from each segment.</p></li>
+<li><p><strong>tag_field_name</strong> – The field name to store the tags. It’s
+“static_camera_calibration_deepcalib_tags” in default.</p></li>
+<li><p><strong>frame_dir</strong> – Output directory to save extracted frames.</p></li>
+<li><p><strong>if_output_info</strong> – Whether to save the camera parameters results
+to an JSON file.</p></li>
+<li><p><strong>output_info_dir</strong> – Output directory for saving camera parameters.</p></li>
+<li><p><strong>args</strong> – extra args</p></li>
+<li><p><strong>kwargs</strong> – extra args</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="data_juicer.ops.mapper.VideoCameraCalibrationStaticDeepcalibMapper.process_single">
+<span class="sig-name descname"><span class="pre">process_single</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sample</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rank</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/data_juicer/ops/mapper/video_camera_calibration_static_deepcalib_mapper.html#VideoCameraCalibrationStaticDeepcalibMapper.process_single"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#data_juicer.ops.mapper.VideoCameraCalibrationStaticDeepcalibMapper.process_single" title="Link to this definition">#</a></dt>
+<dd><p>For sample level, sample –&gt; sample</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>sample</strong> – sample to process</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>processed sample</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="data_juicer.ops.mapper.VideoCameraCalibrationStaticMogeMapper">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">data_juicer.ops.mapper.</span></span><span class="sig-name descname"><span class="pre">VideoCameraCalibrationStaticMogeMapper</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/data_juicer/ops/mapper/video_camera_calibration_static_moge_mapper.html#VideoCameraCalibrationStaticMogeMapper"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#data_juicer.ops.mapper.VideoCameraCalibrationStaticMogeMapper" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <a class="reference internal" href="data_juicer.ops.base_op.html#data_juicer.ops.base_op.Mapper" title="data_juicer.ops.base_op.Mapper"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mapper</span></code></a></p>
+<p>Compute the camera intrinsics and field of view (FOV)
+for a static camera using Moge-2 (more accurate
+than DeepCalib).</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="data_juicer.ops.mapper.VideoCameraCalibrationStaticMogeMapper.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'Ruicheng/moge-2-vitl'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">frame_num</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Annotated</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Gt</span><span class="p"><span class="pre">(</span></span><span class="n"><span class="pre">gt</span></span><span class="o"><span class="pre">=</span></span><span class="m"><span class="pre">0</span></span><span class="p"><span class="pre">)</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">duration</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tag_field_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'static_camera_calibration_moge_tags'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">frame_dir</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'/home/runner/.cache/data_juicer/assets'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">if_output_info</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_info_dir</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'/home/runner/.cache/data_juicer/assets'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">if_output_points_info</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">if_output_depth_info</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">if_output_mask_info</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/data_juicer/ops/mapper/video_camera_calibration_static_moge_mapper.html#VideoCameraCalibrationStaticMogeMapper.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#data_juicer.ops.mapper.VideoCameraCalibrationStaticMogeMapper.__init__" title="Link to this definition">#</a></dt>
+<dd><p>Initialization method.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>model_path</strong> – The path to the Moge-2 model.</p></li>
+<li><p><strong>frame_num</strong> – The number of frames to be extracted uniformly from
+the video. If it’s 1, only the middle frame will be extracted. If
+it’s 2, only the first and the last frames will be extracted. If
+it’s larger than 2, in addition to the first and the last frames,
+other frames will be extracted uniformly within the video duration.
+If “duration” &gt; 0, frame_num is the number of frames per segment.</p></li>
+<li><p><strong>duration</strong> – The duration of each segment in seconds.
+If 0, frames are extracted from the entire video.
+If duration &gt; 0, the video is segmented into multiple segments
+based on duration, and frames are extracted from each segment.</p></li>
+<li><p><strong>tag_field_name</strong> – The field name to store the tags. It’s
+“static_camera_calibration_moge_tags” in default.</p></li>
+<li><p><strong>frame_dir</strong> – Output directory to save extracted frames.</p></li>
+<li><p><strong>if_output_info</strong> – Whether to save the camera parameters results
+to an JSON file.</p></li>
+<li><p><strong>output_info_dir</strong> – Output directory for saving camera parameters.</p></li>
+<li><p><strong>if_output_points_info</strong> – Determines whether to output point map
+in OpenCV camera coordinate system (x right, y down, z forward).
+For MoGe-2, the point map is in metric scale.</p></li>
+<li><p><strong>if_output_depth_info</strong> – Determines whether to output
+depth maps.</p></li>
+<li><p><strong>if_output_mask_info</strong> – Determines whether to output a
+binary mask for valid pixels.</p></li>
+<li><p><strong>args</strong> – extra args</p></li>
+<li><p><strong>kwargs</strong> – extra args</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="data_juicer.ops.mapper.VideoCameraCalibrationStaticMogeMapper.process_single">
+<span class="sig-name descname"><span class="pre">process_single</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sample</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rank</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/data_juicer/ops/mapper/video_camera_calibration_static_moge_mapper.html#VideoCameraCalibrationStaticMogeMapper.process_single"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#data_juicer.ops.mapper.VideoCameraCalibrationStaticMogeMapper.process_single" title="Link to this definition">#</a></dt>
+<dd><p>For sample level, sample –&gt; sample</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>sample</strong> – sample to process</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>processed sample</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
 <dt class="sig sig-object py" id="data_juicer.ops.mapper.VideoCaptioningFromAudioMapper">
 <span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">data_juicer.ops.mapper.</span></span><span class="sig-name descname"><span class="pre">VideoCaptioningFromAudioMapper</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/data_juicer/ops/mapper/video_captioning_from_audio_mapper.html#VideoCaptioningFromAudioMapper"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#data_juicer.ops.mapper.VideoCaptioningFromAudioMapper" title="Link to this definition">#</a></dt>
 <dd><p>Bases: <a class="reference internal" href="data_juicer.ops.base_op.html#data_juicer.ops.base_op.Mapper" title="data_juicer.ops.base_op.Mapper"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mapper</span></code></a></p>
@@ -5797,6 +5922,114 @@ This path can alternatively be defined by setting the <cite>DJ_PRODUCED_DATA_DIR
 </dd></dl>
 
 <dl class="py class">
+<dt class="sig sig-object py" id="data_juicer.ops.mapper.VideoHandReconstructionHaworMapper">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">data_juicer.ops.mapper.</span></span><span class="sig-name descname"><span class="pre">VideoHandReconstructionHaworMapper</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/data_juicer/ops/mapper/video_hand_reconstruction_hawor_mapper.html#VideoHandReconstructionHaworMapper"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#data_juicer.ops.mapper.VideoHandReconstructionHaworMapper" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <a class="reference internal" href="data_juicer.ops.base_op.html#data_juicer.ops.base_op.Mapper" title="data_juicer.ops.base_op.Mapper"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mapper</span></code></a></p>
+<p>Use HaWoR and MoGe-2 for hand reconstruction.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="data_juicer.ops.mapper.VideoHandReconstructionHaworMapper.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">hawor_model_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'hawor.ckpt'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hawor_config_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'model_config.yaml'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hawor_detector_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'detector.pt'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">moge_model_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'Ruicheng/moge-2-vitl'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mano_right_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'path_to_mano_right_pkl'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">frame_num</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Annotated</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Gt</span><span class="p"><span class="pre">(</span></span><span class="n"><span class="pre">gt</span></span><span class="o"><span class="pre">=</span></span><span class="m"><span class="pre">0</span></span><span class="p"><span class="pre">)</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">duration</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">thresh</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tag_field_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'hand_reconstruction_hawor_tags'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">frame_dir</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'/home/runner/.cache/data_juicer/assets'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">if_output_moge_info</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">moge_output_info_dir</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'/home/runner/.cache/data_juicer/assets'</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/data_juicer/ops/mapper/video_hand_reconstruction_hawor_mapper.html#VideoHandReconstructionHaworMapper.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#data_juicer.ops.mapper.VideoHandReconstructionHaworMapper.__init__" title="Link to this definition">#</a></dt>
+<dd><p>Initialization method.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>hawor_model_path</strong> – The path to ‘hawor.ckpt’. for the HaWoR
+model.</p></li>
+<li><p><strong>hawor_config_path</strong> – The path to ‘model_config.yaml’ for the
+HaWoR model.</p></li>
+<li><p><strong>hawor_detector_path</strong> – The path to ‘detector.pt’ for the HaWoR
+model.</p></li>
+<li><p><strong>moge_model_path</strong> – The path to the Moge-2 model.</p></li>
+<li><p><strong>mano_right_path</strong> – The path to ‘MANO_RIGHT.pkl’. Users need to
+download this file from <a class="reference external" href="https://mano.is.tue.mpg.de/">https://mano.is.tue.mpg.de/</a> and comply
+with the MANO license.</p></li>
+<li><p><strong>frame_num</strong> – The number of frames to be extracted uniformly from
+the video. If it’s 1, only the middle frame will be extracted. If
+it’s 2, only the first and the last frames will be extracted. If
+it’s larger than 2, in addition to the first and the last frames,
+other frames will be extracted uniformly within the video duration.
+If “duration” &gt; 0, frame_num is the number of frames per segment.</p></li>
+<li><p><strong>duration</strong> – The duration of each segment in seconds.
+If 0, frames are extracted from the entire video.
+If duration &gt; 0, the video is segmented into multiple segments
+based on duration, and frames are extracted from each segment.</p></li>
+<li><p><strong>thresh</strong> – Confidence threshold for hand detection.</p></li>
+<li><p><strong>tag_field_name</strong> – The field name to store the tags. It’s
+“hand_reconstruction_hawor_tags” in default.</p></li>
+<li><p><strong>frame_dir</strong> – Output directory to save extracted frames.</p></li>
+<li><p><strong>if_output_moge_info</strong> – Whether to save the results from MoGe-2
+to an JSON file.</p></li>
+<li><p><strong>moge_output_info_dir</strong> – Output directory for saving camera
+parameters.</p></li>
+<li><p><strong>args</strong> – extra args</p></li>
+<li><p><strong>kwargs</strong> – extra args</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="data_juicer.ops.mapper.VideoHandReconstructionHaworMapper.detect_track">
+<span class="sig-name descname"><span class="pre">detect_track</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">imgfiles</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hand_det_model</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">thresh</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.5</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span></span></span><a class="reference internal" href="../_modules/data_juicer/ops/mapper/video_hand_reconstruction_hawor_mapper.html#VideoHandReconstructionHaworMapper.detect_track"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#data_juicer.ops.mapper.VideoHandReconstructionHaworMapper.detect_track" title="Link to this definition">#</a></dt>
+<dd><p>Detects and tracks hands across a sequence of images using YOLO.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>imgfiles</strong> (<em>list</em>) – List of image frames.</p></li>
+<li><p><strong>hand_det_model</strong> (<em>YOLO</em>) – The initialized YOLO hand detection model.</p></li>
+<li><p><strong>thresh</strong> (<em>float</em>) – Confidence threshold for detection.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>(list of boxes (unused in original logic), dict of tracks)</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>tuple</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="data_juicer.ops.mapper.VideoHandReconstructionHaworMapper.hawor_motion_estimation">
+<span class="sig-name descname"><span class="pre">hawor_motion_estimation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">imgfiles</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tracks</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">img_focal</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">img_paths</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">single_image</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="reference internal" href="../_modules/data_juicer/ops/mapper/video_hand_reconstruction_hawor_mapper.html#VideoHandReconstructionHaworMapper.hawor_motion_estimation"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#data_juicer.ops.mapper.VideoHandReconstructionHaworMapper.hawor_motion_estimation" title="Link to this definition">#</a></dt>
+<dd><p>Performs HAWOR 3D hand reconstruction on detected and tracked hand regions.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>imgfiles</strong> (<em>list</em>) – List of image frames.</p></li>
+<li><p><strong>tracks</strong> (<em>dict</em>) – Dictionary mapping track ID to a list of detection objects.</p></li>
+<li><p><strong>model</strong> (<em>HAWOR</em>) – The initialized HAWOR model.</p></li>
+<li><p><strong>img_focal</strong> (<em>float</em>) – Camera focal length.</p></li>
+<li><p><strong>img_paths</strong> (<em>list</em>) – List of images paths.</p></li>
+<li><p><strong>single_image</strong> (<em>bool</em>) – Flag for single-image processing mode.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Reconstructed parameters (‘left’ and ‘right’ hand results).</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="data_juicer.ops.mapper.VideoHandReconstructionHaworMapper.process_single">
+<span class="sig-name descname"><span class="pre">process_single</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sample</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rank</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/data_juicer/ops/mapper/video_hand_reconstruction_hawor_mapper.html#VideoHandReconstructionHaworMapper.process_single"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#data_juicer.ops.mapper.VideoHandReconstructionHaworMapper.process_single" title="Link to this definition">#</a></dt>
+<dd><p>For sample level, sample –&gt; sample</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>sample</strong> – sample to process</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>processed sample</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
 <dt class="sig sig-object py" id="data_juicer.ops.mapper.VideoHandReconstructionMapper">
 <span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">data_juicer.ops.mapper.</span></span><span class="sig-name descname"><span class="pre">VideoHandReconstructionMapper</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/data_juicer/ops/mapper/video_hand_reconstruction_mapper.html#VideoHandReconstructionMapper"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#data_juicer.ops.mapper.VideoHandReconstructionMapper" title="Link to this definition">#</a></dt>
 <dd><p>Bases: <a class="reference internal" href="data_juicer.ops.base_op.html#data_juicer.ops.base_op.Mapper" title="data_juicer.ops.base_op.Mapper"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mapper</span></code></a></p>
@@ -6268,7 +6501,7 @@ in the text field and read videos in order, or use the ‘videos’ field direct
 
 <dl class="py method">
 <dt class="sig sig-object py" id="data_juicer.ops.mapper.VideoSplitByKeyFrameMapper.get_split_key_frame">
-<span class="sig-name descname"><span class="pre">get_split_key_frame</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">video_key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">container</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/data_juicer/ops/mapper/video_split_by_key_frame_mapper.html#VideoSplitByKeyFrameMapper.get_split_key_frame"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#data_juicer.ops.mapper.VideoSplitByKeyFrameMapper.get_split_key_frame" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">get_split_key_frame</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">container</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">video_key</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/data_juicer/ops/mapper/video_split_by_key_frame_mapper.html#VideoSplitByKeyFrameMapper.get_split_key_frame"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#data_juicer.ops.mapper.VideoSplitByKeyFrameMapper.get_split_key_frame" title="Link to this definition">#</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -6457,6 +6690,60 @@ will be extracted uniformly within the video duration.</p></li>
 <dl class="py method">
 <dt class="sig sig-object py" id="data_juicer.ops.mapper.VideoTaggingFromFramesMapper.process_single">
 <span class="sig-name descname"><span class="pre">process_single</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sample</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rank</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/data_juicer/ops/mapper/video_tagging_from_frames_mapper.html#VideoTaggingFromFramesMapper.process_single"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#data_juicer.ops.mapper.VideoTaggingFromFramesMapper.process_single" title="Link to this definition">#</a></dt>
+<dd><p>For sample level, sample –&gt; sample</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>sample</strong> – sample to process</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>processed sample</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="data_juicer.ops.mapper.VideoUndistortMapper">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">data_juicer.ops.mapper.</span></span><span class="sig-name descname"><span class="pre">VideoUndistortMapper</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/data_juicer/ops/mapper/video_undistort_mapper.html#VideoUndistortMapper"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#data_juicer.ops.mapper.VideoUndistortMapper" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <a class="reference internal" href="data_juicer.ops.base_op.html#data_juicer.ops.base_op.Mapper" title="data_juicer.ops.base_op.Mapper"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mapper</span></code></a></p>
+<p>Undistort raw videos with corresponding camera intrinsics
+and distortion coefficients.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="data_juicer.ops.mapper.VideoUndistortMapper.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">output_video_dir</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'/home/runner/.cache/data_juicer/assets'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tag_field_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'video_undistortion_tags'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">batch_size_each_video</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">crf</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">22</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/data_juicer/ops/mapper/video_undistort_mapper.html#VideoUndistortMapper.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#data_juicer.ops.mapper.VideoUndistortMapper.__init__" title="Link to this definition">#</a></dt>
+<dd><p>Initialization method.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>output_video_dir</strong> – Output directory to save undistorted videos.</p></li>
+<li><p><strong>tag_field_name</strong> – The field name to store the tags. It’s
+“video_undistortion_tags” in default.</p></li>
+<li><p><strong>batch_size_each_video</strong> – Number of frames to process and save per
+temporary TS file batch.</p></li>
+<li><p><strong>crf</strong> – Constant Rate Factor (CRF) for FFmpeg encoding quality.</p></li>
+<li><p><strong>args</strong> – extra args</p></li>
+<li><p><strong>kwargs</strong> – extra args</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="data_juicer.ops.mapper.VideoUndistortMapper.concatenate_ts_files">
+<span class="sig-name descname"><span class="pre">concatenate_ts_files</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">folder</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">video_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">batch_counts</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/data_juicer/ops/mapper/video_undistort_mapper.html#VideoUndistortMapper.concatenate_ts_files"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#data_juicer.ops.mapper.VideoUndistortMapper.concatenate_ts_files" title="Link to this definition">#</a></dt>
+<dd><p>Concatenate batch TS files into final mp4.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="data_juicer.ops.mapper.VideoUndistortMapper.create_ffmpeg_writer">
+<span class="sig-name descname"><span class="pre">create_ffmpeg_writer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">output_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">width</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">height</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fps</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">crf</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/data_juicer/ops/mapper/video_undistort_mapper.html#VideoUndistortMapper.create_ffmpeg_writer"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#data_juicer.ops.mapper.VideoUndistortMapper.create_ffmpeg_writer" title="Link to this definition">#</a></dt>
+<dd><p>Spawn an ffmpeg async encoding process for writing raw frames.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="data_juicer.ops.mapper.VideoUndistortMapper.process_single">
+<span class="sig-name descname"><span class="pre">process_single</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sample</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/data_juicer/ops/mapper/video_undistort_mapper.html#VideoUndistortMapper.process_single"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#data_juicer.ops.mapper.VideoUndistortMapper.process_single" title="Link to this definition">#</a></dt>
 <dd><p>For sample level, sample –&gt; sample</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -7124,6 +7411,16 @@ comprehensive list of whitespace characters, which can be found at
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data_juicer.ops.mapper.VggtMapper.process_single"><code class="docutils literal notranslate"><span class="pre">VggtMapper.process_single()</span></code></a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data_juicer.ops.mapper.VideoCameraCalibrationStaticDeepcalibMapper"><code class="docutils literal notranslate"><span class="pre">VideoCameraCalibrationStaticDeepcalibMapper</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data_juicer.ops.mapper.VideoCameraCalibrationStaticDeepcalibMapper.__init__"><code class="docutils literal notranslate"><span class="pre">VideoCameraCalibrationStaticDeepcalibMapper.__init__()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data_juicer.ops.mapper.VideoCameraCalibrationStaticDeepcalibMapper.process_single"><code class="docutils literal notranslate"><span class="pre">VideoCameraCalibrationStaticDeepcalibMapper.process_single()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data_juicer.ops.mapper.VideoCameraCalibrationStaticMogeMapper"><code class="docutils literal notranslate"><span class="pre">VideoCameraCalibrationStaticMogeMapper</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data_juicer.ops.mapper.VideoCameraCalibrationStaticMogeMapper.__init__"><code class="docutils literal notranslate"><span class="pre">VideoCameraCalibrationStaticMogeMapper.__init__()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data_juicer.ops.mapper.VideoCameraCalibrationStaticMogeMapper.process_single"><code class="docutils literal notranslate"><span class="pre">VideoCameraCalibrationStaticMogeMapper.process_single()</span></code></a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data_juicer.ops.mapper.VideoCaptioningFromAudioMapper"><code class="docutils literal notranslate"><span class="pre">VideoCaptioningFromAudioMapper</span></code></a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data_juicer.ops.mapper.VideoCaptioningFromAudioMapper.__init__"><code class="docutils literal notranslate"><span class="pre">VideoCaptioningFromAudioMapper.__init__()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data_juicer.ops.mapper.VideoCaptioningFromAudioMapper.process_batched"><code class="docutils literal notranslate"><span class="pre">VideoCaptioningFromAudioMapper.process_batched()</span></code></a></li>
@@ -7163,6 +7460,13 @@ comprehensive list of whitespace characters, which can be found at
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data_juicer.ops.mapper.VideoFFmpegWrappedMapper"><code class="docutils literal notranslate"><span class="pre">VideoFFmpegWrappedMapper</span></code></a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data_juicer.ops.mapper.VideoFFmpegWrappedMapper.__init__"><code class="docutils literal notranslate"><span class="pre">VideoFFmpegWrappedMapper.__init__()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data_juicer.ops.mapper.VideoFFmpegWrappedMapper.process_single"><code class="docutils literal notranslate"><span class="pre">VideoFFmpegWrappedMapper.process_single()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data_juicer.ops.mapper.VideoHandReconstructionHaworMapper"><code class="docutils literal notranslate"><span class="pre">VideoHandReconstructionHaworMapper</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data_juicer.ops.mapper.VideoHandReconstructionHaworMapper.__init__"><code class="docutils literal notranslate"><span class="pre">VideoHandReconstructionHaworMapper.__init__()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data_juicer.ops.mapper.VideoHandReconstructionHaworMapper.detect_track"><code class="docutils literal notranslate"><span class="pre">VideoHandReconstructionHaworMapper.detect_track()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data_juicer.ops.mapper.VideoHandReconstructionHaworMapper.hawor_motion_estimation"><code class="docutils literal notranslate"><span class="pre">VideoHandReconstructionHaworMapper.hawor_motion_estimation()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data_juicer.ops.mapper.VideoHandReconstructionHaworMapper.process_single"><code class="docutils literal notranslate"><span class="pre">VideoHandReconstructionHaworMapper.process_single()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data_juicer.ops.mapper.VideoHandReconstructionMapper"><code class="docutils literal notranslate"><span class="pre">VideoHandReconstructionMapper</span></code></a><ul class="nav section-nav flex-column">
@@ -7223,6 +7527,13 @@ comprehensive list of whitespace characters, which can be found at
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data_juicer.ops.mapper.VideoTaggingFromFramesMapper"><code class="docutils literal notranslate"><span class="pre">VideoTaggingFromFramesMapper</span></code></a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data_juicer.ops.mapper.VideoTaggingFromFramesMapper.__init__"><code class="docutils literal notranslate"><span class="pre">VideoTaggingFromFramesMapper.__init__()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data_juicer.ops.mapper.VideoTaggingFromFramesMapper.process_single"><code class="docutils literal notranslate"><span class="pre">VideoTaggingFromFramesMapper.process_single()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data_juicer.ops.mapper.VideoUndistortMapper"><code class="docutils literal notranslate"><span class="pre">VideoUndistortMapper</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data_juicer.ops.mapper.VideoUndistortMapper.__init__"><code class="docutils literal notranslate"><span class="pre">VideoUndistortMapper.__init__()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data_juicer.ops.mapper.VideoUndistortMapper.concatenate_ts_files"><code class="docutils literal notranslate"><span class="pre">VideoUndistortMapper.concatenate_ts_files()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data_juicer.ops.mapper.VideoUndistortMapper.create_ffmpeg_writer"><code class="docutils literal notranslate"><span class="pre">VideoUndistortMapper.create_ffmpeg_writer()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data_juicer.ops.mapper.VideoUndistortMapper.process_single"><code class="docutils literal notranslate"><span class="pre">VideoUndistortMapper.process_single()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data_juicer.ops.mapper.VideoWholeBodyPoseEstimationMapper"><code class="docutils literal notranslate"><span class="pre">VideoWholeBodyPoseEstimationMapper</span></code></a><ul class="nav section-nav flex-column">
