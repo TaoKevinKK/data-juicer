@@ -478,12 +478,15 @@
 <li class="toctree-l1"><a class="reference internal" href="Operators.html">Operator Schemas 算子提要</a></li>
 <li class="toctree-l1"><a class="reference internal" href="DatasetCfg_ZH.html">数据集配置指南</a></li>
 <li class="toctree-l1"><a class="reference internal" href="BadDataExhibition_ZH.html">“坏”数据展览</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Cache_ZH.html">缓存管理</a></li>
 <li class="toctree-l1"><a class="reference internal" href="DJ_SORA_ZH.html">DJ-SORA</a></li>
 <li class="toctree-l1"><a class="reference internal" href="DJ_service_ZH.html">DJ_服务化</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">开发者指南</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Distributed_ZH.html">Data-Juicer 分布式数据处理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Export_ZH.html">数据集导出</a></li>
 <li class="toctree-l1"><a class="reference internal" href="JobManagement_ZH.html">作业管理</a></li>
 <li class="toctree-l1"><a class="reference internal" href="PartitionAndCheckpoint_ZH.html">分区处理与检查点</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Tracing_ZH.html">数据追踪</a></li>
 <li class="toctree-l1"><a class="reference internal" href="awesome_llm_data.html">Awesome Data-Model Co-Development of MLLMs </a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">算子</span></p>
@@ -495,11 +498,19 @@
 <li class="toctree-l1"><a class="reference internal" href="operators/formatter/index.html">Formatter</a></li>
 <li class="toctree-l1"><a class="reference internal" href="operators/grouper/index.html">Grouper</a></li>
 <li class="toctree-l1"><a class="reference internal" href="operators/selector/index.html">Selector</a></li>
-<li class="toctree-l1"><a class="reference internal" href="operators/op/index.html">Op</a></li>
+<li class="toctree-l1"><a class="reference internal" href="operators/pipeline/index.html">Pipeline</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">demos</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../demos/README_ZH.html">演示</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../demos/agent/BAD_CASE_INSIGHTS.html">Agent 交互数据：Bad case 洞察</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../demos/agent/BAD_CASE_REPORT.html">Bad case 自助报告（简化入口）</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../demos/agent/PERFORMANCE_LLM.html">Agent 流水线里 LLM 算子：加速与超参</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../demos/agent/QUICKSTART_BAD_CASE.html">Bad case 流水线：一键运行与端到端指南</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../demos/agent/README.html">Agent quality &amp; bad-case docs</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../demos/agent/minimal_configs/README.html">Agent 流水线最小可运行配置（便于逐项调试）</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../demos/agent/scripts/README.html">Agent pipeline 后分析脚本</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../demos/auto_evaluation_helm/README_ZH.html">自动化评测：HELM 评测及可视化</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../demos/process_video_on_ray/data/Note.html">Note for dataset path</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../demos/role_playing_system_prompt/README_ZH.html">为LLM构造角色扮演的system prompt</a></li>
@@ -1186,22 +1197,30 @@ git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </sp
 </pre></div>
 </div>
 <ol class="arabic simple" start="5">
-<li><p>随着算子数量的增加，Data-Juicer的依赖也不断增多。为了防止Data-Juicer的依赖越来越重，我们为算子额外增加的依赖提供了一套延迟加载加上使用时安装依赖的策略。<code class="docutils literal notranslate"><span class="pre">LazyLoader</span></code>会检查加载的module对应的package有没有都安装，没有的话会动态自动安装。如下样例：</p></li>
+<li><p>随着算子数量的增加，Data-Juicer的依赖也不断增多。为了防止Data-Juicer的依赖越来越重，我们为算子额外增加的依赖提供了一套延迟加载加上使用时安装依赖的策略。</p>
+<ul class="simple">
+<li><p>OP的 <code class="docutils literal notranslate"><span class="pre">_requirements</span></code> 属性可用于指定算子所需的额外依赖。它可以是一个包列表或指向 requirements.txt 文件的字符串路径。在 Ray 模式下，此属性有助于 Data-Juicer 在 Ray 集群的计算节点上自动安装这些额外依赖。我们建议开发者为新算子显式设置此属性。</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">LazyLoader</span></code>会检查加载的module对应的package有没有都安装，没有的话会动态自动安装。</p></li>
+</ul>
+</li>
 </ol>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># ... (import some library)</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">data_juicer.utils.lazy_loader</span><span class="w"> </span><span class="kn">import</span> <span class="n">LazyLoader</span>
 
-<span class="c1"># lazy import</span>
+<span class="c1"># 懒导入</span>
 <span class="n">torch</span> <span class="o">=</span> <span class="n">LazyLoader</span><span class="p">(</span><span class="s1">&#39;torch&#39;</span><span class="p">)</span>
 <span class="n">transformers</span> <span class="o">=</span> <span class="n">LazyLoader</span><span class="p">(</span><span class="s1">&#39;transformers&#39;</span><span class="p">)</span>
 <span class="n">nltk</span> <span class="o">=</span> <span class="n">LazyLoader</span><span class="p">(</span><span class="s1">&#39;nltk&#39;</span><span class="p">)</span>
 
 <span class="k">class</span><span class="w"> </span><span class="nc">PerplexityFilter</span><span class="p">(</span><span class="n">Filter</span><span class="p">):</span>
+    <span class="c1"># 显式为 OP 设置额外的依赖</span>
+    <span class="n">_requirements</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;kenlm&#39;</span><span class="p">,</span> <span class="s1">&#39;sentencepiece&#39;</span><span class="p">,</span> <span class="s1">&#39;fasttext-wheel&#39;</span><span class="p">]</span>
+
     <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span>
                 <span class="c1"># ... (OP parameters)</span>
                 <span class="o">*</span><span class="n">args</span><span class="p">,</span>
                 <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-        <span class="c1"># auto install before init</span>
+        <span class="c1"># 在初始化前自动安装所需依赖库</span>
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
         <span class="n">LazyLoader</span><span class="o">.</span><span class="n">check_packages</span><span class="p">([</span><span class="s1">&#39;fasttext-wheel&#39;</span><span class="p">])</span>
         <span class="c1"># ... (some codes)</span>

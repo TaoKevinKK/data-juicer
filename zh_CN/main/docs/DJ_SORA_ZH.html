@@ -54,7 +54,7 @@
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
     <link rel="next" title="DJ_服务化" href="DJ_service_ZH.html" />
-    <link rel="prev" title="“坏”数据展览" href="BadDataExhibition_ZH.html" />
+    <link rel="prev" title="缓存管理" href="Cache_ZH.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="zh-CN"/>
   <meta name="docsearch:version" content="" />
@@ -478,12 +478,15 @@
 <li class="toctree-l1"><a class="reference internal" href="Operators.html">Operator Schemas 算子提要</a></li>
 <li class="toctree-l1"><a class="reference internal" href="DatasetCfg_ZH.html">数据集配置指南</a></li>
 <li class="toctree-l1"><a class="reference internal" href="BadDataExhibition_ZH.html">“坏”数据展览</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Cache_ZH.html">缓存管理</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">DJ-SORA</a></li>
 <li class="toctree-l1"><a class="reference internal" href="DJ_service_ZH.html">DJ_服务化</a></li>
 <li class="toctree-l1"><a class="reference internal" href="DeveloperGuide_ZH.html">开发者指南</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Distributed_ZH.html">Data-Juicer 分布式数据处理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Export_ZH.html">数据集导出</a></li>
 <li class="toctree-l1"><a class="reference internal" href="JobManagement_ZH.html">作业管理</a></li>
 <li class="toctree-l1"><a class="reference internal" href="PartitionAndCheckpoint_ZH.html">分区处理与检查点</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Tracing_ZH.html">数据追踪</a></li>
 <li class="toctree-l1"><a class="reference internal" href="awesome_llm_data.html">Awesome Data-Model Co-Development of MLLMs </a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">算子</span></p>
@@ -495,11 +498,19 @@
 <li class="toctree-l1"><a class="reference internal" href="operators/formatter/index.html">Formatter</a></li>
 <li class="toctree-l1"><a class="reference internal" href="operators/grouper/index.html">Grouper</a></li>
 <li class="toctree-l1"><a class="reference internal" href="operators/selector/index.html">Selector</a></li>
-<li class="toctree-l1"><a class="reference internal" href="operators/op/index.html">Op</a></li>
+<li class="toctree-l1"><a class="reference internal" href="operators/pipeline/index.html">Pipeline</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">demos</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../demos/README_ZH.html">演示</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../demos/agent/BAD_CASE_INSIGHTS.html">Agent 交互数据：Bad case 洞察</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../demos/agent/BAD_CASE_REPORT.html">Bad case 自助报告（简化入口）</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../demos/agent/PERFORMANCE_LLM.html">Agent 流水线里 LLM 算子：加速与超参</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../demos/agent/QUICKSTART_BAD_CASE.html">Bad case 流水线：一键运行与端到端指南</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../demos/agent/README.html">Agent quality &amp; bad-case docs</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../demos/agent/minimal_configs/README.html">Agent 流水线最小可运行配置（便于逐项调试）</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../demos/agent/scripts/README.html">Agent pipeline 后分析脚本</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../demos/auto_evaluation_helm/README_ZH.html">自动化评测：HELM 评测及可视化</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../demos/process_video_on_ray/data/Note.html">Note for dataset path</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../demos/role_playing_system_prompt/README_ZH.html">为LLM构造角色扮演的system prompt</a></li>
@@ -688,7 +699,7 @@
 <li><p>[✅] video_captioning_from_audio_mapper（引入人声/对话等信息；  AudioCaption环境、场景等全局信息）</p></li>
 <li><p>[✅] video_captioning_from_video_mapper（视频生文模型，连续帧生成时序信息）</p></li>
 <li><p>[✅] video_captioning_from_summarizer_mapper（基于上述子能力的组合，使用纯文本大模型对不同种caption信息去噪、摘要）</p></li>
-<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> [WIP] video_interleaved_mapper（在ICL、时间和跨模态维度增强），<code class="docutils literal notranslate"><span class="pre">interleaved_modes</span></code> include</p>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox">[WIP] video_interleaved_mapper（在ICL、时间和跨模态维度增强），<code class="docutils literal notranslate"><span class="pre">interleaved_modes</span></code> include</p>
 <ul>
 <li><p>text_image_interleaved（按时序交叉放置同一视频的的caption和frames）</p></li>
 <li><p>text_audio_interleaved（按时序交叉放置同一视频的的ASR文本和frames）</p></li>
@@ -718,12 +729,12 @@
 <li><p>[✅] 黄暴恐</p></li>
 </ul>
 </li>
-<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> [TODO] (Beyond Interpolation) 增强数据真实性和稠密性</p>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox">[TODO] (Beyond Interpolation) 增强数据真实性和稠密性</p>
 <ul class="contains-task-list">
 <li><p>碰撞、光影、重力、3D、场景切换（phase tranisition）、景深等</p></li>
-<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Filter类算子: caption是否描述真实性，该描述的相关性得分/正确性得分</p></li>
-<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Mapper类算子：增强video数据中对物理现象的文本描述</p></li>
-<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> ...</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox">Filter类算子: caption是否描述真实性，该描述的相关性得分/正确性得分</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox">Mapper类算子：增强video数据中对物理现象的文本描述</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox">...</p></li>
 </ul>
 </li>
 </ul>
@@ -741,11 +752,11 @@
 <li><p>[✅] VideoInstruct-100K, Panda70M, ......</p></li>
 </ul>
 </li>
-<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> 大规模高质量DJ-SORA数据集</p>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox">大规模高质量DJ-SORA数据集</p>
 <ul class="contains-task-list">
 <li><p>[✅] (Data sandbox) 基于DJ-video算子构建和优化多模态数据菜谱 (算子同期持续完善)</p></li>
 <li><p>[✅] 数据源持续扩充：open-datasets, youku, web， ...</p></li>
-<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> 基于DJ菜谱规模化分析、清洗、生成高质量多模态数据集</p>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox">基于DJ菜谱规模化分析、清洗、生成高质量多模态数据集</p>
 <ul>
 <li><p>[WIP] 多场景、高动态</p></li>
 </ul>
@@ -768,7 +779,7 @@
 </ul>
 </li>
 <li><p>[✅] (Model-Data sandbox) 在相对小的模型和DJ-SORA数据集上，探索形成低开销、可迁移、有指导性的data-model co-design、配置及检查点</p></li>
-<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> [WIP] 更大规模、更多场景使用DJ-SORA数据训练类SORA模型，提高模型性能</p>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox">[WIP] 更大规模、更多场景使用DJ-SORA数据训练类SORA模型，提高模型性能</p>
 <ul>
 <li><p>[✅] Data-Juicer-T2V, <a class="reference external" href="https://huggingface.co/datajuicer/Data-Juicer-T2V-v2">V-Bench Top1 model</a>。详情请参考<a class="reference external" href="https://datajuicer.github.io/data-juicer-sandbox/zh_CN/main/index_ZH.html">这里</a>。</p></li>
 <li><p>...</p></li>
@@ -790,12 +801,12 @@
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="BadDataExhibition_ZH.html"
+       href="Cache_ZH.html"
        title="上一页">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">上一页</p>
-        <p class="prev-next-title">“坏”数据展览</p>
+        <p class="prev-next-title">缓存管理</p>
       </div>
     </a>
     <a class="right-next"

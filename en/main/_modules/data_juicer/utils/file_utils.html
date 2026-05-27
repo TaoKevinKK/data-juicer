@@ -525,6 +525,7 @@
 
 <span class="kn">import</span><span class="w"> </span><span class="nn">aiohttp</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">datasets.utils.extract</span><span class="w"> </span><span class="kn">import</span> <span class="n">GzipExtractor</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">datasets.utils.extract</span><span class="w"> </span><span class="kn">import</span> <span class="n">ZstdExtractor</span> <span class="k">as</span> <span class="n">Extractor</span>
 
 <span class="kn">from</span><span class="w"> </span><span class="nn">data_juicer.utils.common_utils</span><span class="w"> </span><span class="kn">import</span> <span class="n">dict_to_hash</span>
@@ -637,6 +638,12 @@
             <span class="c1"># just like &#39;.jsonl.zst&#39;</span>
             <span class="n">file_suffixes</span> <span class="o">=</span> <span class="p">[</span><span class="n">suffix</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="k">for</span> <span class="n">suffix</span> <span class="ow">in</span> <span class="n">file</span><span class="o">.</span><span class="n">suffixes</span><span class="p">]</span>
             <span class="n">suffix</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">file_suffixes</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">:])</span>
+        <span class="k">elif</span> <span class="n">GzipExtractor</span><span class="o">.</span><span class="n">is_extractable</span><span class="p">(</span><span class="n">file</span><span class="p">):</span>
+            <span class="c1"># support gzip-format file</span>
+            <span class="c1"># and use the last 2 sub-suffixes as the final suffix</span>
+            <span class="c1"># just like &#39;.jsonl.gz&#39;</span>
+            <span class="n">file_suffixes</span> <span class="o">=</span> <span class="p">[</span><span class="n">suffix</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="k">for</span> <span class="n">suffix</span> <span class="ow">in</span> <span class="n">file</span><span class="o">.</span><span class="n">suffixes</span><span class="p">]</span>
+            <span class="n">suffix</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">file_suffixes</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">:])</span>
 
         <span class="k">if</span> <span class="ow">not</span> <span class="n">suffixes</span> <span class="ow">or</span> <span class="p">(</span><span class="n">suffix</span> <span class="ow">in</span> <span class="n">suffixes</span><span class="p">):</span>
             <span class="k">if</span> <span class="n">suffix</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">file_dict</span><span class="p">:</span>
@@ -651,7 +658,7 @@
 <a class="viewcode-back" href="../../../api/data_juicer.utils.file_utils.html#data_juicer.utils.file_utils.is_remote_path">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">is_remote_path</span><span class="p">(</span><span class="n">path</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Check if the path is a remote path.&quot;&quot;&quot;</span>
-    <span class="k">return</span> <span class="n">path</span><span class="o">.</span><span class="n">startswith</span><span class="p">((</span><span class="s2">&quot;http://&quot;</span><span class="p">,</span> <span class="s2">&quot;https://&quot;</span><span class="p">))</span></div>
+    <span class="k">return</span> <span class="n">path</span><span class="o">.</span><span class="n">startswith</span><span class="p">((</span><span class="s2">&quot;http://&quot;</span><span class="p">,</span> <span class="s2">&quot;https://&quot;</span><span class="p">,</span> <span class="s2">&quot;s3://&quot;</span><span class="p">,</span> <span class="s2">&quot;gs://&quot;</span><span class="p">,</span> <span class="s2">&quot;hdfs://&quot;</span><span class="p">))</span></div>
 
 
 

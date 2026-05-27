@@ -1,156 +1,222 @@
-[[英文主页]](README.md) | [[DJ-Cookbook]](docs/tutorial/DJ-Cookbook_ZH.md) | [[算子池]](docs/Operators.md) | [[API]](https://datajuicer.github.io/data-juicer/zh_CN/main/api) | [[Awesome LLM Data]](docs/awesome_llm_data.md)
+# Data-Juicer: 基础模型时代的*数据操作*系统
 
-# Data Processing for and with Foundation Models
+<p align="center">
+  <a href="https://pypi.org/project/py-data-juicer"><img src="https://img.shields.io/pypi/v/py-data-juicer?logo=pypi&color=026cad" alt="PyPI"></a>
+  <a href="https://pepy.tech/projects/py-data-juicer"><img src="https://static.pepy.tech/personalized-badge/py-data-juicer?period=total&units=INTERNATIONAL_SYSTEM&left_color=grey&right_color=green&left_text=downloads" alt="Downloads"></a>
+   <a href="https://hub.docker.com/r/datajuicer/data-juicer"><img src="https://img.shields.io/docker/v/datajuicer/data-juicer?logo=docker&label=Docker&color=498bdf" alt="Docker"></a>
+  <br>
+  <a href="https://datajuicer.github.io/data-juicer/zh_CN/main/index_ZH.html"><img src="https://img.shields.io/badge/📖_文档-网站-026cad" alt="Docs"></a>
+  <a href="https://datajuicer.github.io/data-juicer/en/main/docs/Operators.html"><img src="https://img.shields.io/badge/🧩_算子-200+-blue" alt="Operators"></a>
+  <a href="https://github.com/datajuicer/data-juicer-hub"><img src="https://img.shields.io/badge/🍳_配方-50+-brightgreen" alt="Recipes"></a>
+  <br>
+  <a href="https://datajuicer.github.io/data-juicer/en/main/index.html"><img src="https://img.shields.io/badge/🇬🇧_English-主页-red" alt="English"></a>
+  <a href="https://arxiv.org/abs/2501.14755"><img src="https://img.shields.io/badge/NeurIPS'25_Spotlight-2.0-B31B1B?logo=arxiv" alt="Paper"></a>
+  <a href="https://github.com/datajuicer/data-juicer">
+    <img src="https://img.shields.io/endpoint?style=flat&url=https%3A%2F%2Fgist.githubusercontent.com%2FHYLcool%2Ff856b14416f08f73d05d32fd992a9c29%2Fraw%2Ftotal_cov.json&label=coverage&logo=codecov&color=4c1" alt="Coverage">
+  </a>
+</p>
 
- <img src="https://img.alicdn.com/imgextra/i1/O1CN01fUfM5A1vPclzPQ6VI_!!6000000006165-0-tps-1792-1024.jpg" width = "533" height = "300" alt="Data-Juicer"/>
+<p align="center">
+  <b>多模态 | 云原生 | AI就绪 | 大规模 </b>
+</p>
 
-![](https://img.shields.io/badge/language-Python-214870.svg)
-![](https://img.shields.io/badge/license-Apache--2.0-000000.svg)
-[![pypi version](https://img.shields.io/pypi/v/py-data-juicer?logo=pypi&color=026cad)](https://pypi.org/project/py-data-juicer)
-[![Docker version](https://img.shields.io/docker/v/datajuicer/data-juicer?logo=docker&label=Docker&color=498bdf)](https://hub.docker.com/r/datajuicer/data-juicer)
-[![Docker on OSS](https://img.shields.io/badge/OSS%20latest-none?logo=docker&label=Docker&color=498bdf)](https://dail-wlcb.oss-cn-wulanchabu.aliyuncs.com/data_juicer/docker_images/data-juicer-latest.tar.gz)
-![](https://img.shields.io/endpoint?url=https%3A%2F%2Fgist.githubusercontent.com%2FHYLcool%2Ff856b14416f08f73d05d32fd992a9c29%2Fraw%2Ftotal_cov.json)
+Data-Juicer (DJ) 将原始数据转化为 AI 就绪的智能。它将数据处理视为*可组合的基础设施*——提供模块化构建块，在整个 AI 生命周期中清洗、合成和分析数据，释放每份数据的潜在价值。
 
-[![DataModality](https://img.shields.io/badge/DataModality-Text,Image,Audio,Video-brightgreen.svg)](https://datajuicer.github.io/data-juicer/en/main/docs/tutorial/DJ-Cookbook.html)
-[![Usage](https://img.shields.io/badge/Usage-Cleaning,Synthesis,Analysis-FFD21E.svg)](https://datajuicer.github.io/data-juicer/en/main/docs/hub/RecipeGallery.html)
-[![PyPI Downloads](https://static.pepy.tech/personalized-badge/py-data-juicer?period=total&units=INTERNATIONAL_SYSTEM&left_color=BLACK&right_color=GREEN&left_text=downloads)](https://pepy.tech/projects/py-data-juicer)
+无论您是在去重网络规模的预训练语料库、整理智能体交互轨迹，还是准备特定领域的 RAG 索引，DJ 都可以从您的笔记本电脑无缝扩展到数千节点的集群——无需编写胶水代码。
 
+> **阿里云 PAI** 已深度集成 Data-Juicer 到其数据处理产品中。请参阅 **[快速提交 DataJuicer 任务](https://www.alibabacloud.com/help/zh/pai/user-guide/quickly-submit-a-datajuicer-task)**。
 
+---
 
-[![算子池](https://img.shields.io/badge/文档-算子池-blue?logo=Markdown)](https://datajuicer.github.io/data-juicer/en/main/docs/Operators.html)
-[![Paper](http://img.shields.io/badge/cs.LG-1.0Paper(SIGMOD'24)-B31B1B?logo=arxiv&logoColor=red)](https://arxiv.org/abs/2309.02033)
-[![Paper](http://img.shields.io/badge/cs.AI-2.0Paper(NeurIPS'25)-B31B1B?logo=arxiv&logoColor=red)](https://arxiv.org/abs/2501.14755)
+## 🚀 快速开始
 
+**零安装探索**：
+- [带教程的 JupyterLab 在线环境](http://8.138.149.181/) 
+- [询问 DJ Copilot](https://datajuicer.github.io/data-juicer/zh_CN/main/docs_index_ZH.html)
 
+**安装并运行**：
+```bash
+uv pip install py-data-juicer
+dj-process --config demos/process_simple/process.yaml
+```
 
-Data-Juicer 是一个一站式系统，面向大模型的文本及多模态数据处理。我们提供了一个基于 JupyterLab 的 [Playground](http://8.138.149.181/)，您可以从浏览器中在线试用 Data-Juicer。 如果Data-Juicer对您的研发有帮助，请支持加星（自动订阅我们的新发布）、以及引用我们的[工作](#参考文献) 。
+**或在 Python 中组合**：
+```python
+from data_juicer.core.data import NestedDataset
+from data_juicer.ops.filter import TextLengthFilter
+from data_juicer.ops.mapper import WhitespaceNormalizationMapper
 
-[阿里云人工智能平台 PAI](https://www.aliyun.com/product/bigdata/learn) 已深度集成Data-Juicer到其数据处理产品中。PAI提供包含数据集管理、算力管理、模型工具链、模型开发、模型训练、模型部署、AI资产管理在内的功能模块，为用户提供高性能、高稳定、企业级的大模型工程化能力。数据处理的使用文档请参考：[快速提交DataJuicer任务](https://www.alibabacloud.com/help/zh/pai/user-guide/quickly-submit-a-datajuicer-task)。
+ds = NestedDataset.from_dict({
+    "text": ["Short", "This passes the filter.", "Text   with   spaces"]
+})
+res_ds = ds.process([
+    TextLengthFilter(min_len=10),
+    WhitespaceNormalizationMapper()
+])
 
-Data-Juicer正在积极更新和维护中，我们将定期强化和新增更多的功能和数据菜谱。热烈欢迎您[加入我们](#贡献与致谢)，一起推进大模型的数据-模型协同开发和研究应用！
+for s in res_ds:
+    print(s)
+```
 
-## 新消息
-- 🚀[2026-01-15] [Data-Juicer Q&A Copilot](https://github.com/datajuicer/data-juicer-agents/blob/main/qa-copilot/README_ZH.md) 已上线 [文档页](https://datajuicer.github.io/data-juicer/zh_CN/main/index_ZH.html) | [钉钉](https://qr.dingtalk.com/action/joingroup?code=v1,k1,N78tgW54U447gJP5aMC95B6qgQhlkVQS4+dp7qQq6MpuRVJIwrSsXmL8oFqU5ajJ&_dt_no_comment=1&origin=11?) | [Discord](https://discord.gg/ngQbB9hEVK) ! 欢迎询问任何与Data-Juicer生态系统有关的问题!
+---
 
-  - 关注 🤖 [Data-Juicer Agents](https://github.com/datajuicer/data-juicer-agents/blob/main) | 📃 [Deploy-ready codes](https://github.com/datajuicer/data-juicer-agents/blob/main/qa-copilot) | 🎬[ More demos](https://github.com/datajuicer/data-juicer-agents/blob/main/qa-copilot/DEMO.md).
-<div align="center">
-<img src="https://github.com/user-attachments/assets/a0099ce2-4ed3-4fab-8cfa-b0bbd3beeac9" width=80%>
-</div>
+## ✨ 为什么选择 Data-Juicer？
 
-- 🎉 [2025-09-19] 我们的 [Data-Juicer 2.0: Cloud-Scale Adaptive Data Processing for and with Foundation Models](https://arxiv.org/abs/2501.14755) 已被接收为 **NeurIPS'25 Spotlight**（处于所有投稿中的前 3.1%）！
-- 🎉 [2025-09-19] 我们关于数据配比/选择/合成的两个工作：[Diversity as a Reward: Fine-Tuning LLMs on a Mixture of Domain-Undetermined Data](https://arxiv.org/abs/2502.04380) 和 [MindGYM: What Matters in Question Synthesis for Thinking-Centric Fine-Tuning?](https://arxiv.org/abs/2503.09499)，已被 **NeurIPS'25** 接收！
-- 🛠️ [2025-06-04] 如何在“经验时代”处理反馈数据？我们提出了 [Trinity-RFT: A General-Purpose and Unified Framework for Reinforcement Fine-Tuning of LLMs](https://arxiv.org/abs/2505.17826)，该框架利用 Data-Juicer 为 RFT 场景量身定制数据处理管道。
-- 🎉 [2025-06-04] 我们的 [Data-Model Co-development 综述](https://ieeexplore.ieee.org/document/11027559) 已被 IEEE Transactions on Pattern Analysis and Machine Intelligence（**TPAMI**）接收！欢迎探索并贡献[awesome-list](https://datajuicer.github.io/data-juicer/en/main/docs/awesome_llm_data.html)。
-- 🔎 [2025-06-04] 我们推出了 [DetailMaster: Can Your Text-to-Image Model Handle Long Prompts?](https://www.arxiv.org/abs/2505.16915) 一项合成基准测试，揭示了大模型虽擅长处理短描述，但在长提示下性能显著下降的问题。
-- 🎉 [2025-05-06] 我们的 [Data-Juicer Sandbox](https://arxiv.org/abs/2407.11784) 已被接收为 **ICML'25 Spotlight**（处于所有投稿中的前 2.6%）！
-- 💡 [2025-03-13] 我们提出[MindGYM: What Matters in Question Synthesis for Thinking-Centric Fine-Tuning?](https://arxiv.org/abs/2503.09499)。一种新的数据合成方法鼓励大模型自我合成高质量、低方差数据，实现高效SFT（如仅使用 *400 个样本* 即可在 [MathVision](https://mathllm.github.io/mathvision/#leaderboard) 上获得 *16%* 的增益）。
-- 🤝 [2025-02-28] DJ 已被集成到 [Ray官方 Ecosystem](https://docs.ray.io/en/latest/ray-overview/ray-libraries.html) 和 [Example Gallery](https://docs.ray.io/en/latest/ray-more-libs/data_juicer_distributed_data_processing.html)。此外，我们在 DJ2.0 中的流式 JSON 加载补丁已被 [Apache Arrow 官方集成](https://github.com/apache/arrow/pull/45084)。
-- 🎉 [2025-02-27] 我们的对比数据合成工作， [ImgDiff](https://arxiv.org/pdf/2408.04594)， 已被 **CVPR'25** 接收！
-- 💡 [2025-02-05] 我们提出了一种新的数据选择方法 [Diversity as a Reward: Fine-Tuning LLMs on a Mixture of Domain-Undetermined Data](https://www.arxiv.org/abs/2502.04380)，该方法基于理论指导，将数据多样性建模为奖励信号，在 7 个基准测试中，微调 SOTA LLMs 取得了更好的整体表现。
-- 🎉 [2025-01-11] 我们发布了 2.0 版论文 [Data-Juicer 2.0: Cloud-Scale Adaptive Data Processing for and with Foundation Models](https://arxiv.org/abs/2501.14755)。DJ现在可以使用阿里云集群中 50 个 Ray 节点上的 6400 个 CPU 核心在 2.1 小时内处理 70B 数据样本，并使用 8 个 Ray 节点上的 1280 个 CPU 核心在 2.8 小时内对 5TB 数据进行重复数据删除。
+### 1. 模块化与可扩展架构
+- **200+ 算子** 涵盖文本、图像、音频、视频和多模态数据
+- **配方优先**：可复现的 YAML 管道，您可以像代码一样进行版本管理、共享和分叉
+- **可组合**：可插入单个算子、链接复杂工作流或编排完整管道
+- **热重载**：无需重启管道即可迭代算子
 
-<details>
-<summary> History News:
-</summary>>
+### 2. 全栈数据智能
+- **基础模型**：预训练、微调、强化学习和评估级数据整理
+- **智能体系统**：清洗工具轨迹、结构化上下文、去标识化和质量把关
+- **RAG与分析**：提取、规范化、语义分块、去重和数据画像分析
 
-- [2025-01-03] 我们通过 20 多个相关的新 [OP](https://github.com/datajuicer/data-juicer/releases/tag/v1.0.2) 以及与 LLaMA-Factory 和 ModelScope-Swift 兼容的统一 [数据集格式](https://github.com/datajuicer/data-juicer/releases/tag/v1.0.3) 更好地支持Post-Tuning场景。
-- [2024-12-17] 我们提出了 *HumanVBench*，它包含 16 个以人为中心的任务，使用合成数据，从内在情感和外在表现的角度对22个视频 MLLM 的能力进行基准测试。请参阅我们的 [论文](https://arxiv.org/abs/2412.17574) 中的更多详细信息，并尝试使用它 [评估](https://github.com/datajuicer/data-juicer/tree/HumanVBench) 您的模型。
-- [2024-11-22] 我们发布 DJ [v1.0.0](https://github.com/datajuicer/data-juicer/releases/tag/v1.0.0)，其中我们重构了 Data-Juicer 的 *Operator*、*Dataset*、*Sandbox* 和许多其他模块以提高可用性，例如支持容错、FastAPI 和自适应资源管理。
-- [2024-08-25] 我们在 KDD'2024 中提供了有关多模态 LLM 数据处理的[教程](https://datajuicer.github.io/data-juicer/_static/tutorial_kdd24.html)。
-- [2024-08-09] 我们提出了Img-Diff，它通过*对比数据合成*来增强多模态大型语言模型的性能，在[MMVP benchmark](https://tsb0601.github.io/mmvp_blog/)中比GPT-4V高出12个点。 更多细节请参阅我们的 [论文](https://arxiv.org/abs/2408.04594), 以及从 [huggingface](https://huggingface.co/datasets/datajuicer/Img-Diff) 和 [modelscope](https://modelscope.cn/datasets/Data-Juicer/Img-Diff)下载这份数据集。
-- [2024-07-24] "天池 Better Synth 多模态大模型数据合成赛"——第四届Data-Juicer大模型数据挑战赛已经正式启动！立即访问[竞赛官网](https://tianchi.aliyun.com/competition/entrance/532251)，了解赛事详情。
-- [2024-07-17] 我们利用Data-Juicer[沙盒实验室套件](https://datajuicer.github.io/data-juicer-sandbox/zh_CN/main/index_ZH.html)，通过数据与模型间的系统性研发工作流，调优数据和模型，在[VBench](https://huggingface.co/spaces/Vchitect/VBench_Leaderboard)文生视频排行榜取得了新的榜首。相关成果已经整理发表在[论文](http://arxiv.org/abs/2407.11784)中，并且模型已在[ModelScope](https://modelscope.cn/models/Data-Juicer/Data-Juicer-T2V)和[HuggingFace](https://huggingface.co/datajuicer/Data-Juicer-T2V)平台发布。
-- [2024-07-12] 我们的MLLM-Data精选列表已经演化为一个模型-数据协同开发的角度系统性[综述](https://arxiv.org/abs/2407.08583)。欢迎[浏览](docs/awesome_llm_data.md)或参与贡献!
-- [2024-06-01] ModelScope-Sora"数据导演"创意竞速——第三届Data-Juicer大模型数据挑战赛已经正式启动！立即访问[竞赛官网](https://tianchi.aliyun.com/competition/entrance/532219)，了解赛事详情。
-- [2024-03-07] 我们现在发布了 **Data-Juicer [v0.2.0](https://github.com/datajuicer/data-juicer/releases/tag/v0.2.0)**! 在这个新版本中，我们支持了更多的 **多模态数据(包括视频)** 相关特性。我们还启动了 **[DJ-SORA](docs/DJ_SORA_ZH.md)** ，为SORA-like大模型构建开放的大规模高质量数据集！
-- [2024-02-20] 我们在积极维护一份关于LLM-Data的*精选列表*，欢迎[访问](docs/awesome_llm_data.md)并参与贡献！
-- [2024-02-05] 我们的论文被SIGMOD'24 industrial track接收！
-- [2024-01-10] 开启"数据混合"新视界——第二届Data-Juicer大模型数据挑战赛已经正式启动！立即访问[竞赛官网](https://tianchi.aliyun.com/competition/entrance/532174)，了解赛事详情。
-- [2024-01-05] **Data-Juicer v0.1.3** 版本发布了。 
-在这个新版本中，我们支持了**更多Python版本**（3.8-3.10），同时支持了**多模态**数据集的[转换](tools/fmt_conversion/multimodal/README_ZH.md)和[处理](docs/Operators.md)（包括文本、图像和音频。更多模态也将会在之后支持）！
-此外，我们的论文也更新到了[第三版](https://arxiv.org/abs/2309.02033) 。
-- [2023-10-13] 我们的第一届以数据为中心的 LLM 竞赛开始了！
-  请访问大赛官网，FT-Data Ranker（[1B赛道](https://tianchi.aliyun.com/competition/entrance/532157) 、[7B赛道](https://tianchi.aliyun.com/competition/entrance/532158) ) ，了解更多信息。
+### 3. 生产就绪的性能
+- **规模**：在 50 个 Ray 节点（6400 核心）上 2 小时处理 700 亿样本
+- **效率**：使用 1280 核心在 2.8 小时内对 5TB 进行去重
+- **优化**：自动 OP 融合（2-10 倍加速）、自适应并行、CUDA 加速、鲁棒性
+- **可观测性**：内置追踪功能，用于调试、审计和迭代改进
+
+> *⭐ 如果 Data-Juicer 为您节省了时间或改进了您的数据工作，请考虑为仓库加星。* 它帮助更多人发现项目，并让您及时了解新发布和功能。
+
+---
+
+## 📰 动态
+<details open>
+<summary>[2026-03-17] Release v1.5.1: <b>LaTeX 算子上线；压缩格式支持；算子健壮性修复</b></summary>
+
+- 📄 新增两个面向 LaTeX 的 Mapper 算子，将 data-juicer 的文档处理能力延伸至 .tex 压缩包和图片上下文的提取与处理。
+- 🗜️ 支持压缩数据集格式：现在可以直接加载 json[l].gz 文件，Ray 数据集也同步支持读取压缩 JSON 文件。
+- 📚 新增文档，覆盖缓存、导出和执行追踪等工作流，帮助用户更好地理解和调试数据处理流水线。
+- 🤖 对 data-juicer-agents 的重大重构与升级已经完成：项目架构及 CLI/会话能力经过全面重新设计，以提升可维护性与可扩展性。详情请参阅 [date-juicer-agents](https://github.com/datajuicer/data-juicer-agents).
 </details>
 
-## Demos
+<details open>
+<summary>[2026-02-12] Release v1.5.0: <b>分区Ray执行器，OP级环境隔离，以及更多具身算子</b></summary>
 
-DataJuicer-Agent:数据处理，即刻启程！
+- 🚀 *分布式执行框架升级* — 新增分区Ray执行器与OP级隔离环境，强化容错性、可扩展性及依赖冲突管理。
+- 🤖 *具身AI视频处理能力扩展* — 集成相机校准、视频去畸变、手部重建、位姿估计等专用操作符，提升多视角视频处理能力。
+- 💪🏻 *系统性能与开发体验优化* — 支持批处理推理、内存/日志精简、关键逻辑重构，并更新文档与问题模板。
+- 🐳 *关键问题修复与稳定性提升* — 修复重复项追踪、参数冲突、首页渲染等缺陷，增强系统可靠性。
+</details>
 
-https://github.com/user-attachments/assets/6eb726b7-6054-4b0c-905e-506b2b9c7927
+<details>
+<summary>[2026-02-02] Release v1.4.6: <b>Copilot、视频字节 I/O 与 Ray 追踪</b></summary>
 
-DataJuicer-Sandbox: 降本增效，优化数据-模型协同开发！
+- 🤖 *Q&A Copilot* — 现已上线我们的[文档站点](https://datajuicer.github.io/data-juicer/zh_CN/main/index_ZH.html) | [钉钉](https://qr.dingtalk.com/action/joingroup?code=v1,k1,N78tgW54U447gJP5aMC95B6qgQhlkVQS4+dp7qQq6MpuRVJIwrSsXmL8oFqU5ajJ&_dt_no_comment=1&origin=11?) | [Discord](https://discord.gg/ngQbB9hEVK)。欢迎询问任何与 Data-Juicer 生态系统相关的问题！  
+    - 查看 🤖 [Data-Juicer Agents](https://github.com/datajuicer/data-juicer-agents/blob/main) | 📃 [部署就绪代码](https://github.com/datajuicer/data-juicer-agents/blob/main/qa-copilot) | 🎬[更多演示](https://github.com/datajuicer/data-juicer-agents/blob/main/qa-copilot/DEMO.md) 了解更多详情。
+- 🎬 *视频字节 I/O* — 视频管道的直接字节处理  
+- 🫆 *Ray 模式追踪器* — 在分布式处理中追踪变更的样本  
+- 🐳 *增强与修复* — 刷新 Docker 镜像、小幅性能提升、GitHub Insights 流量工作流、Ray 兼容性更新以及 Bug/文档修复。
+</details>
 
-https://github.com/user-attachments/assets/a45f0eee-0f0e-4ffe-9a42-d9a55370089d
+<details >
+<summary>[2026-01-15] Release v1.4.5: <b>20+ 新 OP、Ray vLLM 管道与 Sphinx 文档升级</b> </summary>
 
-## 为什么选择 Data-Juicer？
+- *具身 AI OP*：添加/增强了用于视频标题生成（VLM）、视频对象分割（YOLOE+SAM2）、视频深度估计（可视化 + 点云）、人体姿态（MMPose）、图像标签（VLM）、单图像 3D 人体网格恢复（SAM 3D Body）的映射器，以及 *S3 上传/下载*。
+- *新管道 OP*：将多个 OP 组合成一个管道；引入了用于 LLM/VLM 推理的 *Ray + vLLM* 管道。
+- *文档升级*：迁移到统一的基于 *Sphinx* 的文档构建/部署工作流，具有隔离的主题/架构仓库。
+- *增强与修复*：依赖更新、改进的 Ray 去重和 S3 加载、OpenAI Responses API 支持、追踪器一致性、Docker 基础更新为 CUDA 12.6.3 + Ubuntu 24.04 + Py3.11，以及多个 Bug 修复。 
 
-<img src="https://img.alicdn.com/imgextra/i4/O1CN015URK6i21KU3XdkUpK_!!6000000006966-2-tps-3994-3956.png" align="center" width="500" />
+</details>
 
-- **系统化和可重用**：
-系统化地为用户提供 100 多个核心 [算子](docs/Operators.md) 和 50 多个可重用的数据菜谱和
-专用工具套件，旨在解耦于特定的多模态 LLM 数据集和处理管道运行。支持预训练、后训练、英语、中文等场景中的数据分析、清洗和合成。
+<details>
+<summary>[2025-12-01] Release v1.4.4: <b>NeurIPS'25 Spotlight、6 个新视频/多模态 OP 与 S3 I/O</b> </summary>
 
-- **易用、可扩展**：
-简洁灵活，提供快速[入门指南](docs/tutorial/QuickStart_ZH.md)和包含丰富使用示例的[DJ-Cookbook](docs/tutorial/DJ-Cookbook_ZH.md)。您可以灵活实现自己的OP，[自定义](docs/DeveloperGuide_ZH.md)数据处理工作流。
+- Data-Juicer 2.0 获得 NeurIPS'25 **Spotlight**
+- *仓库拆分*：sandbox/recipes/agents 移至独立仓库
+- *S3 I/O* 添加到加载器/导出器
+- *6 个新的视频和多模态 OP*（角色检测、VGGT、全身姿态、手部重建）+ 文档/Ray/视频 I/O 改进和 Bug 修复
+</details>
 
-  Data-Juicer 现采用 AI 自动重写和优化算子的 docstring，并生成详细的算子文档，帮助更快理解每个算子的功能及用法。  
-  如需了解该文档增强流程的具体实现，欢迎访问 [op_doc_enhance_workflow](https://github.com/datajuicer/data-juicer/tree/main/docs/op_doc_enhance_workflow)。
+查看 [所有发布](https://github.com/datajuicer/data-juicer/releases) 和 [动态归档](docs/news_zh.md)
 
-- **高效、稳定**：提供性能优化的[并行数据处理能力](docs/Distributed_ZH.md)（Aliyun-PAI\Ray\CUDA\OP Fusion），
-更快、更少资源消耗，基于大规模生产环境打磨。
+---
 
-- **效果验证、沙盒**：支持数据模型协同开发，通过[沙盒实验室](https://datajuicer.github.io/data-juicer-sandbox/zh_CN/main/index_ZH.html)实现快速迭代，提供反馈循环、可视化等功能，让您更好地理解和改进数据和模型。已经有许多基于 DJ 衍生的数据菜谱和模型经过了效用验证，譬如在预训练、文生视频、图文生成等场景。
-![Data-in-the-loop](https://img.alicdn.com/imgextra/i2/O1CN017U7Zz31Y7XtCJ5GOz_!!6000000003012-0-tps-3640-1567.jpg)
+## 🔌 用户与生态系统
+> 以下列表重点关注*面向开发者的集成和使用*，按*字母顺序*排列。  
+> 缺少您的项目/名称？欢迎[提交 PR](https://github.com/datajuicer/data-juicer/pulls) 或[联系我们](#贡献与社区)。
+
+Data-Juicer 可无缝集成到您现有的技术栈，并随着社区贡献而不断发展：
+
+### 扩展
+- **[data-juicer-agents](https://github.com/datajuicer/data-juicer-agents)** — DJ Copilot 和智能体工作流  
+- **[data-juicer-hub](https://github.com/datajuicer/data-juicer-hub)** — 社区配方和最佳实践  
+- **[data-juicer-sandbox](https://github.com/datajuicer/data-juicer-sandbox)** — 带反馈循环的数据-模型协同开发  
+
+### 框架与平台
+[阿里云 PAI](https://www.alibabacloud.com/zh/product/machine-learning?_p_lc=1) · [Delta Lake](https://delta.io/)[AgentScope](https://github.com/agentscope-ai/agentscope) · [Apache Arrow](https://github.com/apache/arrow) · [Apache HDFS](https://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-hdfs/HdfsUserGuide.html) · [Apache Hudi](https://hudi.apache.org/) · [Apache Iceberg](https://iceberg.apache.org/) · [Apache Paimon](https://paimon.apache.org/) · [DiffSynth-Studio](https://github.com/modelscope/DiffSynth-Studio) · [EasyAnimate](https://github.com/aigc-apps/EasyAnimate) · [Eval-Scope](https://github.com/modelscope/evalscope) · [华为昇腾](https://www.huawei.com/en/products/cloud-computing-dc/atlas/ascend) · [Hugging Face](https://huggingface.co/) · [LanceDB](https://lancedb.github.io/lance/) · [LLaMA-Factory](https://github.com/hiyouga/LLaMA-Factory) · [ModelScope](https://modelscope.cn/) · [ModelScope Swift](https://github.com/modelscope/ms-swift) · [NVIDIA NeMo](https://github.com/NVIDIA/NeMo) · [Ray](https://docs.ray.io/) · [RM-Gallery](https://github.com/modelscope/RM-Gallery) · [Trinity-RFT](https://github.com/modelscope/Trinity-RFT) · [火山引擎](https://www.volcengine.com/)
+
+### 企业
+阿里巴巴集团、蚂蚁集团、比亚迪、字节跳动、袋鼠云、京东、NVIDIA、OPPO、小红书、小米、喜马拉雅等。
+
+### 学术机构
+中科院、南京大学、北京大学、中国人民大学、清华大学、中科院大学、浙江大学等。
+
+### 贡献与社区
+我们相信*共同建设*。无论您是修复拼写错误、开发新算子还是分享数据处理配方，每一次贡献都塑造着数据处理的未来。
+
+我们欢迎各个层面的贡献：
+- **[Good First Issues](https://github.com/datajuicer/data-juicer/labels/good%20first%20issue)** — 添加算子、改进文档、报告问题或修复 Bug
+- **[开发者指南](https://datajuicer.github.io/data-juicer/en/main/docs/DeveloperGuide.html)** — 优化引擎、添加功能或增强核心基础设施
+- **[DJ-Hub](https://github.com/datajuicer/data-juicer-hub)** — 分享知识：配方、论文和最佳实践
+- **联系**：[Slack](https://join.slack.com/t/data-juicer/shared_invite/zt-23zxltg9d-Z4d3EJuhZbCLGwtnLWWUDg) · [钉钉](https://qr.dingtalk.com/action/joingroup?code=v1,k1,N78tgW54U447gJP5aMC95B6qgQhlkVQS4+dp7qQq6MpuRVJIwrSsXmL8oFqU5ajJ&_dt_no_comment=1&origin=11?) · [Discord](https://discord.gg/ngQbB9hEVK)
+
+| Discord | 钉钉 |
+|:---:|:---:|
+| <img src="https://gw.alicdn.com/imgextra/i1/O1CN011Oj8CB1f8Bw5JpgJA_!!6000000003961-0-tps-762-769.jpg" width="100"> | <img src="https://gw.alicdn.com/imgextra/i3/O1CN01bBPoaX1EwZsiYudtd_!!6000000000416-2-tps-656-660.png" width="100"> |
+
+Data-Juicer 由用户和社区共同打造：
+- **发起方**：阿里巴巴通义实验室  
+- **联合开发**：阿里云 PAI、Anyscale（Ray 团队）、中山大学、NVIDIA（NeMo 团队）以及[全球贡献者](https://github.com/datajuicer/data-juicer/graphs/contributors)
+- **启发来源**：Apache Arrow、Ray、Hugging Face Datasets、BLOOM、RedPajama-Data、...
+
+---
 
 ## 文档
 
-详细文档请看[此处](https://datajuicer.github.io/data-juicer/zh_CN/main/docs_index_ZH.html)。
+详细文档请查看[此处](https://datajuicer.github.io/data-juicer/zh_CN/main/docs_index_ZH.html)。
 
-## 开源协议
+**快速链接：**
+- **[算子池](https://datajuicer.github.io/data-juicer/en/main/docs/Operators.html)** — 浏览 200+ 带示例的算子
+- **[data-juicer-hub](https://github.com/datajuicer/data-juicer-hub)** — 社区驱动的配方和最佳实践
+- **[开发者指南](https://datajuicer.github.io/data-juicer/en/main/docs/DeveloperGuide.html)** — 构建您自己的代码并为 DJ 贡献
+- **[data-juicer-cookbook](https://datajuicer.github.io/data-juicer/en/main/docs/tutorial/DJ-Cookbook.html)** — 资源归档
+- **[awesome_llm_data](https://datajuicer.github.io/data-juicer/en/main/docs/awesome_llm_data)** — 数据-模型协同开发的"Awesome List"
 
-Data-Juicer 在 Apache License 2.0 协议下发布。
+---
 
-## 贡献与致谢
+## 📄 许可证与致谢
 
-Data-Juicer 的发展离不开社区的参与和反馈，非常欢迎各方面的贡献：开发新的算子（无论是简单函数还是现有论文的先进算法）、分享新的数据菜谱和使用场景、提出新功能需求、提升代码效率、修复程序错误、完善项目文档、反馈使用体验等。您可参考[开发者指南](docs/DeveloperGuide_ZH.md)开启贡献；在社区中宣传本项目，或为我们的代码仓库点亮星标 ⭐，同样是对该项目非常宝贵的支持！
+Data-Juicer 在 [Apache License 2.0](LICENSE) 下发布。  
+如果您项目中要致谢DataJuicer：请使用我们的[Badge](https://dail-wlcb.oss-cn-wulanchabu.aliyuncs.com/data_juicer/assets/DJ-Org-Logo.jpeg)，或文本譬如 "本项目使用Data-Juicer: https://github.com/datajuicer"。
 
-我们由衷感谢所有为本项目做出贡献的[代码贡献者](https://github.com/datajuicer/data-juicer/graphs/contributors)，他们是本项目的基石。我们尽力确保以下名单的完整和及时，并期待更多名字的加入（英文字母序排列）。若有疏漏，请随时联系我们。
+---
 
-- **发起方：** 阿里巴巴通义实验室
-- **联合研发优化：** 阿里云PAI、Anyscale (Ray Team)、中山大学 ([知识工程实验室](https://github.com/YingShen-SYSU/AIGC))、NVIDIA (NeMo Team) 等
-- **用户/提供无价反馈：** [AgentScope](https://github.com/agentscope-ai/agentscope)、阿里巴巴集团、蚂蚁集团、比亚迪、字节跳动、[DiffSynth-Studio](https://github.com/modelscope/DiffSynth-Studio)、袋鼠云、[EasyAnimate](https://github.com/aigc-apps/EasyAnimate)、[Eval-Scope](https://github.com/modelscope/evalscope)、京东、[LLaMA-Factory](https://github.com/hiyouga/LLaMA-Factory)、南京大学、OPPO、北京大学、[RM-Gallery](https://github.com/modelscope/RM-Gallery)、中国人民大学、清华大学、[Trinity-RFT](https://github.com/modelscope/Trinity-RFT)、中国科学院、中国科学院大学、小红书、小米、喜马拉雅、浙江大学等
-- **其它项目：** Data-Juicer 也感谢许多先驱开源项目，例如 [Apache Arrow](https://github.com/apache/arrow)、[BLOOM](https://huggingface.co/bigscience/bloom)、[Hugging Face Datasets](https://github.com/huggingface/datasets)、[RedPajama-Data](https://github.com/togethercomputer/RedPajama-Data/tree/rp_v1)、[Ray](https://github.com/ray-project/ray)、[vLLM](https://github.com/vllm-project/vllm) 等
+## 📖 引用
 
-我们期待您的反馈与合作。如您有合作意向或关于新子项目的提案，欢迎通过 GitHub Issues、Pull Requests、[Slack](https://join.slack.com/t/data-juicer/shared_invite/zt-23zxltg9d-Z4d3EJuhZbCLGwtnLWWUDg?spm=a2c22.12281976.0.0.7a8253f30mgpjw)、[钉钉](https://qr.dingtalk.com/action/joingroup?code=v1,k1,N78tgW54U447gJP5aMC95B6qgQhlkVQS4+dp7qQq6MpuRVJIwrSsXmL8oFqU5ajJ&_dt_no_comment=1&origin=11?)、 [Discord](https://discord.gg/ngQbB9hEVK)或[邮件](mailto:datajuicer@outlook.com)与我们联系。
+如果您发现 Data-Juicer 帮助了您的项目，请考虑如下引用：
 
-欢迎加入我们的社群：
-
-|[钉钉](https://qr.dingtalk.com/action/joingroup?code=v1,k1,N78tgW54U447gJP5aMC95B6qgQhlkVQS4+dp7qQq6MpuRVJIwrSsXmL8oFqU5ajJ&_dt_no_comment=1&origin=11?)                                                                                          | [Discord](https://discord.gg/ngQbB9hEVK)                                                                  |
-|----------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------|
-| <img src="https://gw.alicdn.com/imgextra/i3/O1CN01bBPoaX1EwZsiYudtd_!!6000000000416-2-tps-656-660.png" width="100" height="100"> | <img src="https://gw.alicdn.com/imgextra/i1/O1CN011Oj8CB1f8Bw5JpgJA_!!6000000003961-0-tps-762-769.jpg" width="100" height="100"> |
-
-## 参考文献
-如果您发现Data-Juicer对您的研发有帮助，请引用以下工作，[1.0paper](https://arxiv.org/abs/2309.02033)，[2.0paper](https://arxiv.org/abs/2501.14755)。
-
-```
+```bibtex
 @inproceedings{djv1,
   title={Data-Juicer: A One-Stop Data Processing System for Large Language Models},
-  author={Daoyuan Chen and Yilun Huang and Zhijian Ma and Hesen Chen and Xuchen Pan and Ce Ge and Dawei Gao and Yuexiang Xie and Zhaoyang Liu and Jinyang Gao and Yaliang Li and Bolin Ding and Jingren Zhou},
-  booktitle={International Conference on Management of Data},
+  author={Chen, Daoyuan and Huang, Yilun and Ma, Zhijian and Chen, Hesen and Pan, Xuchen and Ge, Ce and Gao, Dawei and Xie, Yuexiang and Liu, Zhaoyang and Gao, Jinyang and Li, Yaliang and Ding, Bolin and Zhou, Jingren},
+  booktitle={SIGMOD},
   year={2024}
 }
 
 @article{djv2,
   title={Data-Juicer 2.0: Cloud-Scale Adaptive Data Processing for and with Foundation Models},
   author={Chen, Daoyuan and Huang, Yilun and Pan, Xuchen and Jiang, Nana and Wang, Haibin and Zhang, Yilei and Ge, Ce and Chen, Yushuo and Zhang, Wenhao and Ma, Zhijian and Huang, Jun and Lin, Wei and Li, Yaliang and Ding, Bolin and Zhou, Jingren},
-  journal={Advances in Neural Information Processing Systems},
+  journal={NeurIPS},
   year={2025}
 }
 ```
+
 <details>
-<summary>更多Data-Juicer团队关于数据的论文:
-</summary>>
+<summary><b>更多出版物</b>（点击展开）</summary>
 
 - (ICML'25 Spotlight) [Data-Juicer Sandbox: A Feedback-Driven Suite for Multimodal Data-Model Co-development](https://arxiv.org/abs/2407.11784)
 
@@ -169,4 +235,3 @@ Data-Juicer 的发展离不开社区的参与和反馈，非常欢迎各方面�
 - (Data Scaling) [BiMix: A Bivariate Data Mixing Law for Language Model Pretraining](https://arxiv.org/abs/2405.14908)
 
 </details>
-
